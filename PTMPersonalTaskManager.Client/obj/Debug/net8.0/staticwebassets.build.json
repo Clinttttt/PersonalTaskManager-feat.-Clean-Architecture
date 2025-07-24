@@ -1,0 +1,640 @@
+{
+  "Version": 1,
+  "Hash": "Kmgb+SQOlVt0JiHnPy80swyHsiYQGCs/ifx6mnKhAXo=",
+  "Source": "PTMPersonalTaskManager.Client",
+  "BasePath": "_content/PTMPersonalTaskManager.Client",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "PTMPersonalTaskManager.Client\\wwwroot",
+      "Source": "PTMPersonalTaskManager.Client",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PTMPersonalTaskManager.Client.styles.css",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "PTMPersonalTaskManager.Client#[.{fingerprint}]?.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "xif36r9ho1",
+      "Integrity": "p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PTMPersonalTaskManager.Client.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PTMPersonalTaskManager.Client.bundle.scp.css",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "PTMPersonalTaskManager.Client#[.{fingerprint}]!.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "xif36r9ho1",
+      "Integrity": "p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PTMPersonalTaskManager.Client.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\app.css",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "app#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "izziptrd3m",
+      "Integrity": "UjxSDpb3I0Sv7LfVQgJpPK+JPaIeXmlRCl39xrHtQk0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.css"
+    },
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\css\\site.css",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "amvajigm4n",
+      "Integrity": "bkYH4/mhnwbrNbJmzjTYEYouHIsVES93YRu15mTQdis=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\css\\site.min.css",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "css/site.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sduhoe86nj",
+      "Integrity": "EMTZOS2dHXo4p8ptXoJjuz+xfphdJlGw+NRIdxSUm7c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\favicon.png",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "app.css",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2597"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UjxSDpb3I0Sv7LfVQgJpPK+JPaIeXmlRCl39xrHtQk0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Jul 2025 15:38:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-UjxSDpb3I0Sv7LfVQgJpPK+JPaIeXmlRCl39xrHtQk0="
+        }
+      ]
+    },
+    {
+      "Route": "app.izziptrd3m.css",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2597"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"UjxSDpb3I0Sv7LfVQgJpPK+JPaIeXmlRCl39xrHtQk0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Jul 2025 15:38:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "izziptrd3m"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-UjxSDpb3I0Sv7LfVQgJpPK+JPaIeXmlRCl39xrHtQk0="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.amvajigm4n.css",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bkYH4/mhnwbrNbJmzjTYEYouHIsVES93YRu15mTQdis=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 06:56:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "amvajigm4n"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bkYH4/mhnwbrNbJmzjTYEYouHIsVES93YRu15mTQdis="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1317"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bkYH4/mhnwbrNbJmzjTYEYouHIsVES93YRu15mTQdis=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 06:56:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bkYH4/mhnwbrNbJmzjTYEYouHIsVES93YRu15mTQdis="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.min.css",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\css\\site.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68860"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EMTZOS2dHXo4p8ptXoJjuz+xfphdJlGw+NRIdxSUm7c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 07:09:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EMTZOS2dHXo4p8ptXoJjuz+xfphdJlGw+NRIdxSUm7c="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.min.sduhoe86nj.css",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\css\\site.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "68860"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EMTZOS2dHXo4p8ptXoJjuz+xfphdJlGw+NRIdxSUm7c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 07:09:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sduhoe86nj"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EMTZOS2dHXo4p8ptXoJjuz+xfphdJlGw+NRIdxSUm7c="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ifv42okdf2.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Jul 2025 15:28:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 21 Jul 2025 15:28:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "PTMPersonalTaskManager.Client.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PTMPersonalTaskManager.Client.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5941"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 06:37:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c="
+        }
+      ]
+    },
+    {
+      "Route": "PTMPersonalTaskManager.Client.styles.css",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PTMPersonalTaskManager.Client.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5941"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 06:37:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c="
+        }
+      ]
+    },
+    {
+      "Route": "PTMPersonalTaskManager.Client.xif36r9ho1.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PTMPersonalTaskManager.Client.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5941"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 06:37:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xif36r9ho1"
+        },
+        {
+          "Name": "label",
+          "Value": "PTMPersonalTaskManager.Client.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c="
+        }
+      ]
+    },
+    {
+      "Route": "PTMPersonalTaskManager.Client.xif36r9ho1.styles.css",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PTMPersonalTaskManager.Client.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5941"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 06:37:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xif36r9ho1"
+        },
+        {
+          "Name": "label",
+          "Value": "PTMPersonalTaskManager.Client.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c="
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/PTMPersonalTaskManager.Client/app.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-UjxSDpb3I0Sv7LfVQgJpPK\u002BJPaIeXmlRCl39xrHtQk0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2597"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022UjxSDpb3I0Sv7LfVQgJpPK\u002BJPaIeXmlRCl39xrHtQk0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 21 Jul 2025 15:38:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PTMPersonalTaskManager.Client/app.izziptrd3m.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"izziptrd3m"},{"Name":"integrity","Value":"sha256-UjxSDpb3I0Sv7LfVQgJpPK\u002BJPaIeXmlRCl39xrHtQk0="},{"Name":"label","Value":"_content/PTMPersonalTaskManager.Client/app.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2597"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022UjxSDpb3I0Sv7LfVQgJpPK\u002BJPaIeXmlRCl39xrHtQk0=\u0022"},{"Name":"Last-Modified","Value":"Mon, 21 Jul 2025 15:38:06 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PTMPersonalTaskManager.Client/css/site.amvajigm4n.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"amvajigm4n"},{"Name":"integrity","Value":"sha256-bkYH4/mhnwbrNbJmzjTYEYouHIsVES93YRu15mTQdis="},{"Name":"label","Value":"_content/PTMPersonalTaskManager.Client/css/site.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1317"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022bkYH4/mhnwbrNbJmzjTYEYouHIsVES93YRu15mTQdis=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Jul 2025 06:56:55 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PTMPersonalTaskManager.Client/css/site.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-bkYH4/mhnwbrNbJmzjTYEYouHIsVES93YRu15mTQdis="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1317"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022bkYH4/mhnwbrNbJmzjTYEYouHIsVES93YRu15mTQdis=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Jul 2025 06:56:55 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PTMPersonalTaskManager.Client/css/site.min.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.min.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-EMTZOS2dHXo4p8ptXoJjuz\u002BxfphdJlGw\u002BNRIdxSUm7c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"68860"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022EMTZOS2dHXo4p8ptXoJjuz\u002BxfphdJlGw\u002BNRIdxSUm7c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Jul 2025 07:09:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PTMPersonalTaskManager.Client/css/site.min.sduhoe86nj.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.min.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"sduhoe86nj"},{"Name":"integrity","Value":"sha256-EMTZOS2dHXo4p8ptXoJjuz\u002BxfphdJlGw\u002BNRIdxSUm7c="},{"Name":"label","Value":"_content/PTMPersonalTaskManager.Client/css/site.min.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"68860"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022EMTZOS2dHXo4p8ptXoJjuz\u002BxfphdJlGw\u002BNRIdxSUm7c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Jul 2025 07:09:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PTMPersonalTaskManager.Client/favicon.ifv42okdf2.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ifv42okdf2"},{"Name":"integrity","Value":"sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="},{"Name":"label","Value":"_content/PTMPersonalTaskManager.Client/favicon.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1148"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00224mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\u0022"},{"Name":"Last-Modified","Value":"Mon, 21 Jul 2025 15:28:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PTMPersonalTaskManager.Client/favicon.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1148"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00224mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\u0022"},{"Name":"Last-Modified","Value":"Mon, 21 Jul 2025 15:28:12 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PTMPersonalTaskManager.Client/PTMPersonalTaskManager.Client.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\PTMPersonalTaskManager.Client.xif36r9ho1.bundle.scp.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-p6w\u002BqHNajMOhS8nKKbgM\u002BcUlTNqL9ONA2FbwnodSu5c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5941"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022p6w\u002BqHNajMOhS8nKKbgM\u002BcUlTNqL9ONA2FbwnodSu5c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Jul 2025 06:37:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/PTMPersonalTaskManager.Client/PTMPersonalTaskManager.Client.xif36r9ho1.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\PTMPersonalTaskManager.Client.xif36r9ho1.bundle.scp.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"xif36r9ho1"},{"Name":"integrity","Value":"sha256-p6w\u002BqHNajMOhS8nKKbgM\u002BcUlTNqL9ONA2FbwnodSu5c="},{"Name":"label","Value":"_content/PTMPersonalTaskManager.Client/PTMPersonalTaskManager.Client.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5941"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022p6w\u002BqHNajMOhS8nKKbgM\u002BcUlTNqL9ONA2FbwnodSu5c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 24 Jul 2025 06:37:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

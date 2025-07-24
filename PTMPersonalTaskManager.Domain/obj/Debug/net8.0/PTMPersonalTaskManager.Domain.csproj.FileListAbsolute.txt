@@ -1,0 +1,11 @@
+C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Domain\bin\Debug\net8.0\PTMPersonalTaskManager.Domain.deps.json
+C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Domain\bin\Debug\net8.0\PTMPersonalTaskManager.Domain.dll
+C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Domain\bin\Debug\net8.0\PTMPersonalTaskManager.Domain.pdb
+C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Domain\obj\Debug\net8.0\PTMPersonalTaskManager.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Domain\obj\Debug\net8.0\PTMPersonalTaskManager.Domain.AssemblyInfoInputs.cache
+C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Domain\obj\Debug\net8.0\PTMPersonalTaskManager.Domain.AssemblyInfo.cs
+C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Domain\obj\Debug\net8.0\PTMPersonalTaskManager.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Domain\obj\Debug\net8.0\PTMPersonalTaskManager.Domain.dll
+C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Domain\obj\Debug\net8.0\refint\PTMPersonalTaskManager.Domain.dll
+C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Domain\obj\Debug\net8.0\PTMPersonalTaskManager.Domain.pdb
+C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Domain\obj\Debug\net8.0\ref\PTMPersonalTaskManager.Domain.dll

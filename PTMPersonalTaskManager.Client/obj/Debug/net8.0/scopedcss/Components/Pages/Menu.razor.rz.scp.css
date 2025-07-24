@@ -1,0 +1,8 @@
+.icon-hover[b-v77p3ujekx] {
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+.icon-hover:hover[b-v77p3ujekx] {
+	transform: scale(1.05);
+	filter: brightness(1.1);
+}

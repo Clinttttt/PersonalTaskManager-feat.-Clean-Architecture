@@ -1,0 +1,97 @@
+﻿@page "/menu"
+@rendermode InteractiveServer
+
+<div class="relative parent-div h-screen flex flex-row gap-10">
+  
+    
+    
+    
+    <div class="flex absolute mt-5 ">
+        <!-- Sidebar -->
+        <div class="@SidebarClass bg-base-300 h-30 transition-all duration-300 overflow-hidden" style="border:solid 1px rgba(0,0,0,0.2)">
+            <h2 class="text-xl font-bold mb-4">Sidebar</h2>
+            <ul class="menu">
+                <li><a>Home</a></li>
+                <li><a>Profile</a></li>
+            
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 transition-all duration-300" style="@ContentStyle">
+            <div class="navbar  w-13 shadow mt-7 bg-transparent  shadow-none ">
+                <div class="flex-none ">
+                    <button class=" btn btn-square btn-error rounded-sm" @onclick="ToggleSidebar">
+                        <svg  class="w-[33px] h-[33px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M10 4H4c-1.10457 0-2 .89543-2 2v12c0 1.1046.89543 2 2 2h6V4ZM4.37868 9.29289c-.39052.39053-.39052 1.02371 0 1.41421l1.29283 1.2928-1.29283 1.2929c-.39052.3905-.39052 1.0237 0 1.4142.39052.3905 1.02369.3905 1.41421 0l1.99994-2c.39053-.3905.39053-1.0236 0-1.4142L5.79289 9.29289c-.39052-.39052-1.02369-.39052-1.41421 0Z" clip-rule="evenodd" />
+                            <path d="M12 20h8c1.1046 0 2-.8954 2-2V6c0-1.10457-.8954-2-2-2h-8v16Z" />
+                        </svg>
+
+                    </button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+    <div class="w-76 h-83 mt-16 self-center bg-base-300" style="border:solid 1px rgba(0,0,0,0.2)">
+
+
+    </div>
+
+
+
+    <div class="flex items-center justify-center w-149 h-30 rounded-b-lg mt-5 border bg-linear-to-t from-cyan-500 to-blue-500 text-white  " style="border: solid 1px rgba(0,0,0,0.2)">
+        <img class="icon-hover" src="img/home-icon.png" alt="home icon" width="62" height="62" />
+        <img class="icon-hover" src="img/profile-icon.png" alt="Profile icon" width="62" height="62" />
+        <img class=" icon-hover " src="img/calendar-icon.png" alt="Calendar Icon" width="62" height="62" />
+        <img class="icon-hover" src="img/priority-task.png" alt="priority Task" width="62" height="62" />
+        <img class="icon-hover" src="img/complete-icon.png" alt="complete Task" width="62" height="62" />
+        <img class="icon-hover" src="img/note-icon.png" alt="note" width="62" height="62" />
+        <img class="icon-hover" src="img/card-icon.png" alt="card" width="62" height="62" />
+        <img class="icon-hover" src="img/search-icon.png" alt="search task " width="62" height="62" />
+        <img class="icon-hover" src="img/dashboard-icon.png" alt="dashboard " width="62" height="62" />
+    </div>
+
+
+
+
+
+
+    <div class="w-60 h-118 mb-19 self-center bg-base-300 -translate-x-[1%]">
+    </div>
+
+    <div class="absolute left-1/2 h-83 border top-40 -translate-x-[45%] w-[80%] md:w-[50%]"></div>
+</div>
+
+
+
+
+
+
+
+
+
+@code {
+    private bool isSidebarOpen = true;
+
+    private string SidebarClass => isSidebarOpen ? "w-64" : "w-0";
+    private string ContentStyle => isSidebarOpen ? "margin-left: 0;" : "margin-left: 0;";
+
+    private void ToggleSidebar()
+    {
+        isSidebarOpen = !isSidebarOpen;
+    }
+    }
