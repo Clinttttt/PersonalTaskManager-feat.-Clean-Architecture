@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Kmgb+SQOlVt0JiHnPy80swyHsiYQGCs/ifx6mnKhAXo=",
+  "Hash": "8xlQbEf8be0IUTtuLjx5APY/CaQug3iqLM9me5IKdBs=",
   "Source": "PTMPersonalTaskManager.Client",
   "BasePath": "_content/PTMPersonalTaskManager.Client",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "xif36r9ho1",
-      "Integrity": "p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c=",
+      "Fingerprint": "do1xexvzke",
+      "Integrity": "Q9cgBiEe5hSoY0b/kgK8chYdNGMuM+zUEWN0+U8uLvo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PTMPersonalTaskManager.Client.styles.css"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "xif36r9ho1",
-      "Integrity": "p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c=",
+      "Fingerprint": "do1xexvzke",
+      "Integrity": "Q9cgBiEe5hSoY0b/kgK8chYdNGMuM+zUEWN0+U8uLvo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PTMPersonalTaskManager.Client.bundle.scp.css"
@@ -115,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "sduhoe86nj",
-      "Integrity": "EMTZOS2dHXo4p8ptXoJjuz+xfphdJlGw+NRIdxSUm7c=",
+      "Fingerprint": "8rmkr49021",
+      "Integrity": "zDQl+yk+BKT8cM0qQqDnkVP2/wKc+EFUG7zBWdeqozI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.min.css"
@@ -141,6 +141,195 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\calendar-icon.png",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "img/calendar-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e1c2e1cwky",
+      "Integrity": "jiREb/NWcb+hd0oWSR2c4P+bbKkIu0sZ2YaQPgpwJfo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\calendar-icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\card-icon.png",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "img/card-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k8snychhog",
+      "Integrity": "tFCSIq3fHH4XnJE0NmT8zMBmVyyj6V8fRHzyd3kerkM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\card-icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\complete-icon.png",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "img/complete-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "79j0eyqasv",
+      "Integrity": "exfPL7vg3MN9Hav4l6ZnDobps7CNMy/LJT/Eh7mdUIQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\complete-icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\dashboard-icon.png",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "img/dashboard-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "blfm87usu0",
+      "Integrity": "b1yYqRmQBMBeBoLSzAIFx7/apIW5i3kogd8qaHvoBIM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\dashboard-icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\home-icon.png",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "img/home-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e44gbpw4k3",
+      "Integrity": "IpgVPCm+71uP0n0FP+YL8/DnmC4l4yI2XdUqON3fnAo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\home-icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\note-icon.png",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "img/note-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hdipesxg1z",
+      "Integrity": "uwgLvv4fjNeCpluopxMnNeEVltPMMHNHfZtsyZ6bUtQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\note-icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\priority-task.png",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "img/priority-task#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x87wpco9b1",
+      "Integrity": "sRVgw7yXADQs8jed+w/4Wii5yVgecrFmlDZObTVmFtc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\priority-task.png"
+    },
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\profile-icon.png",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "img/profile-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "na1v3r6f64",
+      "Integrity": "sZhXR7y9+7zQ8D1S6KmqFDsvEUmjsDYr+Pzv2JwQpOo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\profile-icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\search-icon.png",
+      "SourceId": "PTMPersonalTaskManager.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\",
+      "BasePath": "_content/PTMPersonalTaskManager.Client",
+      "RelativePath": "img/search-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bzxzklr03s",
+      "Integrity": "x06jn9tBKDd9L86jqDAuz4efoZPiBIXJRKEieLFQlDw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\search-icon.png"
     }
   ],
   "Endpoints": [
@@ -309,6 +498,51 @@
       ]
     },
     {
+      "Route": "css/site.min.8rmkr49021.css",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\css\\site.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "43934"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zDQl+yk+BKT8cM0qQqDnkVP2/wKc+EFUG7zBWdeqozI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 12:14:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8rmkr49021"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zDQl+yk+BKT8cM0qQqDnkVP2/wKc+EFUG7zBWdeqozI="
+        }
+      ]
+    },
+    {
       "Route": "css/site.min.css",
       "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\css\\site.min.css",
       "Selectors": [],
@@ -319,7 +553,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "68860"
+          "Value": "43934"
         },
         {
           "Name": "Content-Type",
@@ -327,11 +561,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EMTZOS2dHXo4p8ptXoJjuz+xfphdJlGw+NRIdxSUm7c=\""
+          "Value": "\"zDQl+yk+BKT8cM0qQqDnkVP2/wKc+EFUG7zBWdeqozI=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Jul 2025 07:09:40 GMT"
+          "Value": "Thu, 24 Jul 2025 12:14:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -341,52 +575,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EMTZOS2dHXo4p8ptXoJjuz+xfphdJlGw+NRIdxSUm7c="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.min.sduhoe86nj.css",
-      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\css\\site.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "68860"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EMTZOS2dHXo4p8ptXoJjuz+xfphdJlGw+NRIdxSUm7c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Jul 2025 07:09:40 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "sduhoe86nj"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-EMTZOS2dHXo4p8ptXoJjuz+xfphdJlGw+NRIdxSUm7c="
+          "Value": "sha256-zDQl+yk+BKT8cM0qQqDnkVP2/wKc+EFUG7zBWdeqozI="
         }
       ]
     },
@@ -473,6 +662,744 @@
       ]
     },
     {
+      "Route": "img/calendar-icon.e1c2e1cwky.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\calendar-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1549824"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jiREb/NWcb+hd0oWSR2c4P+bbKkIu0sZ2YaQPgpwJfo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 07:25:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e1c2e1cwky"
+        },
+        {
+          "Name": "label",
+          "Value": "img/calendar-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jiREb/NWcb+hd0oWSR2c4P+bbKkIu0sZ2YaQPgpwJfo="
+        }
+      ]
+    },
+    {
+      "Route": "img/calendar-icon.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\calendar-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1549824"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jiREb/NWcb+hd0oWSR2c4P+bbKkIu0sZ2YaQPgpwJfo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 07:25:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jiREb/NWcb+hd0oWSR2c4P+bbKkIu0sZ2YaQPgpwJfo="
+        }
+      ]
+    },
+    {
+      "Route": "img/card-icon.k8snychhog.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\card-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1438692"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tFCSIq3fHH4XnJE0NmT8zMBmVyyj6V8fRHzyd3kerkM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 08:08:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k8snychhog"
+        },
+        {
+          "Name": "label",
+          "Value": "img/card-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tFCSIq3fHH4XnJE0NmT8zMBmVyyj6V8fRHzyd3kerkM="
+        }
+      ]
+    },
+    {
+      "Route": "img/card-icon.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\card-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1438692"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tFCSIq3fHH4XnJE0NmT8zMBmVyyj6V8fRHzyd3kerkM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 08:08:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tFCSIq3fHH4XnJE0NmT8zMBmVyyj6V8fRHzyd3kerkM="
+        }
+      ]
+    },
+    {
+      "Route": "img/complete-icon.79j0eyqasv.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\complete-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1480469"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"exfPL7vg3MN9Hav4l6ZnDobps7CNMy/LJT/Eh7mdUIQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 07:53:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "79j0eyqasv"
+        },
+        {
+          "Name": "label",
+          "Value": "img/complete-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-exfPL7vg3MN9Hav4l6ZnDobps7CNMy/LJT/Eh7mdUIQ="
+        }
+      ]
+    },
+    {
+      "Route": "img/complete-icon.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\complete-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1480469"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"exfPL7vg3MN9Hav4l6ZnDobps7CNMy/LJT/Eh7mdUIQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 07:53:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-exfPL7vg3MN9Hav4l6ZnDobps7CNMy/LJT/Eh7mdUIQ="
+        }
+      ]
+    },
+    {
+      "Route": "img/dashboard-icon.blfm87usu0.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\dashboard-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1621636"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b1yYqRmQBMBeBoLSzAIFx7/apIW5i3kogd8qaHvoBIM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 07:58:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "blfm87usu0"
+        },
+        {
+          "Name": "label",
+          "Value": "img/dashboard-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-b1yYqRmQBMBeBoLSzAIFx7/apIW5i3kogd8qaHvoBIM="
+        }
+      ]
+    },
+    {
+      "Route": "img/dashboard-icon.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\dashboard-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1621636"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b1yYqRmQBMBeBoLSzAIFx7/apIW5i3kogd8qaHvoBIM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 07:58:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-b1yYqRmQBMBeBoLSzAIFx7/apIW5i3kogd8qaHvoBIM="
+        }
+      ]
+    },
+    {
+      "Route": "img/home-icon.e44gbpw4k3.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\home-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1624000"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IpgVPCm+71uP0n0FP+YL8/DnmC4l4yI2XdUqON3fnAo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 08:15:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e44gbpw4k3"
+        },
+        {
+          "Name": "label",
+          "Value": "img/home-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IpgVPCm+71uP0n0FP+YL8/DnmC4l4yI2XdUqON3fnAo="
+        }
+      ]
+    },
+    {
+      "Route": "img/home-icon.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\home-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1624000"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IpgVPCm+71uP0n0FP+YL8/DnmC4l4yI2XdUqON3fnAo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 08:15:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IpgVPCm+71uP0n0FP+YL8/DnmC4l4yI2XdUqON3fnAo="
+        }
+      ]
+    },
+    {
+      "Route": "img/note-icon.hdipesxg1z.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\note-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1383516"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uwgLvv4fjNeCpluopxMnNeEVltPMMHNHfZtsyZ6bUtQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 08:06:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hdipesxg1z"
+        },
+        {
+          "Name": "label",
+          "Value": "img/note-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-uwgLvv4fjNeCpluopxMnNeEVltPMMHNHfZtsyZ6bUtQ="
+        }
+      ]
+    },
+    {
+      "Route": "img/note-icon.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\note-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1383516"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"uwgLvv4fjNeCpluopxMnNeEVltPMMHNHfZtsyZ6bUtQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 08:06:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-uwgLvv4fjNeCpluopxMnNeEVltPMMHNHfZtsyZ6bUtQ="
+        }
+      ]
+    },
+    {
+      "Route": "img/priority-task.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\priority-task.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1546077"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sRVgw7yXADQs8jed+w/4Wii5yVgecrFmlDZObTVmFtc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 07:44:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sRVgw7yXADQs8jed+w/4Wii5yVgecrFmlDZObTVmFtc="
+        }
+      ]
+    },
+    {
+      "Route": "img/priority-task.x87wpco9b1.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\priority-task.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1546077"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sRVgw7yXADQs8jed+w/4Wii5yVgecrFmlDZObTVmFtc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 07:44:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x87wpco9b1"
+        },
+        {
+          "Name": "label",
+          "Value": "img/priority-task.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sRVgw7yXADQs8jed+w/4Wii5yVgecrFmlDZObTVmFtc="
+        }
+      ]
+    },
+    {
+      "Route": "img/profile-icon.na1v3r6f64.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\profile-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1490660"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sZhXR7y9+7zQ8D1S6KmqFDsvEUmjsDYr+Pzv2JwQpOo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 07:49:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "na1v3r6f64"
+        },
+        {
+          "Name": "label",
+          "Value": "img/profile-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sZhXR7y9+7zQ8D1S6KmqFDsvEUmjsDYr+Pzv2JwQpOo="
+        }
+      ]
+    },
+    {
+      "Route": "img/profile-icon.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\profile-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1490660"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sZhXR7y9+7zQ8D1S6KmqFDsvEUmjsDYr+Pzv2JwQpOo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 07:49:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sZhXR7y9+7zQ8D1S6KmqFDsvEUmjsDYr+Pzv2JwQpOo="
+        }
+      ]
+    },
+    {
+      "Route": "img/search-icon.bzxzklr03s.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\search-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1493596"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"x06jn9tBKDd9L86jqDAuz4efoZPiBIXJRKEieLFQlDw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 08:01:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bzxzklr03s"
+        },
+        {
+          "Name": "label",
+          "Value": "img/search-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-x06jn9tBKDd9L86jqDAuz4efoZPiBIXJRKEieLFQlDw="
+        }
+      ]
+    },
+    {
+      "Route": "img/search-icon.png",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\img\\search-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1493596"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"x06jn9tBKDd9L86jqDAuz4efoZPiBIXJRKEieLFQlDw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 08:01:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-x06jn9tBKDd9L86jqDAuz4efoZPiBIXJRKEieLFQlDw="
+        }
+      ]
+    },
+    {
       "Route": "PTMPersonalTaskManager.Client.bundle.scp.css",
       "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PTMPersonalTaskManager.Client.bundle.scp.css",
       "Selectors": [],
@@ -483,7 +1410,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5941"
+          "Value": "6197"
         },
         {
           "Name": "Content-Type",
@@ -491,11 +1418,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c=\""
+          "Value": "\"Q9cgBiEe5hSoY0b/kgK8chYdNGMuM+zUEWN0+U8uLvo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Jul 2025 06:37:24 GMT"
+          "Value": "Thu, 24 Jul 2025 07:47:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -505,7 +1432,97 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c="
+          "Value": "sha256-Q9cgBiEe5hSoY0b/kgK8chYdNGMuM+zUEWN0+U8uLvo="
+        }
+      ]
+    },
+    {
+      "Route": "PTMPersonalTaskManager.Client.do1xexvzke.bundle.scp.css",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PTMPersonalTaskManager.Client.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6197"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q9cgBiEe5hSoY0b/kgK8chYdNGMuM+zUEWN0+U8uLvo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 07:47:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "do1xexvzke"
+        },
+        {
+          "Name": "label",
+          "Value": "PTMPersonalTaskManager.Client.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q9cgBiEe5hSoY0b/kgK8chYdNGMuM+zUEWN0+U8uLvo="
+        }
+      ]
+    },
+    {
+      "Route": "PTMPersonalTaskManager.Client.do1xexvzke.styles.css",
+      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PTMPersonalTaskManager.Client.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6197"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q9cgBiEe5hSoY0b/kgK8chYdNGMuM+zUEWN0+U8uLvo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 24 Jul 2025 07:47:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "do1xexvzke"
+        },
+        {
+          "Name": "label",
+          "Value": "PTMPersonalTaskManager.Client.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q9cgBiEe5hSoY0b/kgK8chYdNGMuM+zUEWN0+U8uLvo="
         }
       ]
     },
@@ -520,7 +1537,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5941"
+          "Value": "6197"
         },
         {
           "Name": "Content-Type",
@@ -528,11 +1545,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c=\""
+          "Value": "\"Q9cgBiEe5hSoY0b/kgK8chYdNGMuM+zUEWN0+U8uLvo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 24 Jul 2025 06:37:24 GMT"
+          "Value": "Thu, 24 Jul 2025 07:47:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -542,97 +1559,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c="
-        }
-      ]
-    },
-    {
-      "Route": "PTMPersonalTaskManager.Client.xif36r9ho1.bundle.scp.css",
-      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PTMPersonalTaskManager.Client.bundle.scp.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5941"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Jul 2025 06:37:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xif36r9ho1"
-        },
-        {
-          "Name": "label",
-          "Value": "PTMPersonalTaskManager.Client.bundle.scp.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c="
-        }
-      ]
-    },
-    {
-      "Route": "PTMPersonalTaskManager.Client.xif36r9ho1.styles.css",
-      "AssetFile": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PTMPersonalTaskManager.Client.styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5941"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 24 Jul 2025 06:37:24 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xif36r9ho1"
-        },
-        {
-          "Name": "label",
-          "Value": "PTMPersonalTaskManager.Client.styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-p6w+qHNajMOhS8nKKbgM+cUlTNqL9ONA2FbwnodSu5c="
+          "Value": "sha256-Q9cgBiEe5hSoY0b/kgK8chYdNGMuM+zUEWN0+U8uLvo="
         }
       ]
     }

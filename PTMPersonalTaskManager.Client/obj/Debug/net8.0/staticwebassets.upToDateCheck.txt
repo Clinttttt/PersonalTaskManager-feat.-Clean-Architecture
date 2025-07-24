@@ -2,3 +2,12 @@ wwwroot\app.css
 wwwroot\css\site.css
 wwwroot\css\site.min.css
 wwwroot\favicon.png
+wwwroot\img\calendar-icon.png
+wwwroot\img\card-icon.png
+wwwroot\img\complete-icon.png
+wwwroot\img\dashboard-icon.png
+wwwroot\img\home-icon.png
+wwwroot\img\note-icon.png
+wwwroot\img\priority-task.png
+wwwroot\img\profile-icon.png
+wwwroot\img\search-icon.png

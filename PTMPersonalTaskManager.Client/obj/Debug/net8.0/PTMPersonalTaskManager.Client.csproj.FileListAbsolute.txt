@@ -179,3 +179,5 @@ C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskMan
 C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Client\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Client\bin\Debug\net8.0\Mapster.dll
 C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Client\bin\Debug\net8.0\Mapster.Core.dll
+C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Client\obj\Debug\net8.0\PTMPersonalTaskManager.Client.sourcelink.json
+C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Client\obj\Debug\net8.0\scopedcss\Components\Pages\Menu.razor.rz.scp.css

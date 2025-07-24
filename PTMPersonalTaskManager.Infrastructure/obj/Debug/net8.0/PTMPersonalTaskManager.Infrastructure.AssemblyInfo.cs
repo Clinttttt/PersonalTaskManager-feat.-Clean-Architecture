@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PTMPersonalTaskManager.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f08cef58fa39c27a7dfa86d81a2363d13200d66")]
 [assembly: System.Reflection.AssemblyProductAttribute("PTMPersonalTaskManager.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PTMPersonalTaskManager.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

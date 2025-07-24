@@ -44,6 +44,42 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Clint Villanueva/source/repos/PTMPersonalTaskManager/PTMPersonalTaskManager.Client/Components/Pages/Menupage/CalendarPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZW51cGFnZVxDYWxlbmRhclBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Clint Villanueva/source/repos/PTMPersonalTaskManager/PTMPersonalTaskManager.Client/Components/Pages/Menupage/CardPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZW51cGFnZVxDYXJkUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Clint Villanueva/source/repos/PTMPersonalTaskManager/PTMPersonalTaskManager.Client/Components/Pages/Menupage/CompletedPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZW51cGFnZVxDb21wbGV0ZWRQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Clint Villanueva/source/repos/PTMPersonalTaskManager/PTMPersonalTaskManager.Client/Components/Pages/Menupage/DashBoardPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZW51cGFnZVxEYXNoQm9hcmRQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Clint Villanueva/source/repos/PTMPersonalTaskManager/PTMPersonalTaskManager.Client/Components/Pages/Menupage/HomePagerazor.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZW51cGFnZVxIb21lUGFnZXJhem9yLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Clint Villanueva/source/repos/PTMPersonalTaskManager/PTMPersonalTaskManager.Client/Components/Pages/Menupage/NotePage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZW51cGFnZVxOb3RlUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Clint Villanueva/source/repos/PTMPersonalTaskManager/PTMPersonalTaskManager.Client/Components/Pages/Menupage/PriorityPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZW51cGFnZVxQcmlvcml0eVBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Clint Villanueva/source/repos/PTMPersonalTaskManager/PTMPersonalTaskManager.Client/Components/Pages/Menupage/ProfilePage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZW51cGFnZVxQcm9maWxlUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Clint Villanueva/source/repos/PTMPersonalTaskManager/PTMPersonalTaskManager.Client/Components/Pages/Menupage/SearchPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xNZW51cGFnZVxTZWFyY2hQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Clint Villanueva/source/repos/PTMPersonalTaskManager/PTMPersonalTaskManager.Client/Components/Pages/Weather.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 

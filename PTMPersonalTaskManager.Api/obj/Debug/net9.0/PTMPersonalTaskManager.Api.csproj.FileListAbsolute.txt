@@ -91,3 +91,4 @@ C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskMan
 C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Api\obj\Debug\net9.0\PTMPersonalTaskManager.Api.pdb
 C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Api\obj\Debug\net9.0\PTMPersonalTaskManager.Api.genruntimeconfig.cache
 C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Api\obj\Debug\net9.0\ref\PTMPersonalTaskManager.Api.dll
+C:\Users\Clint Villanueva\source\repos\PTMPersonalTaskManager\PTMPersonalTaskManager.Api\obj\Debug\net9.0\PTMPersonalTaskManager.Api.sourcelink.json

@@ -22,6 +22,35 @@ namespace PTMPersonalTaskManager.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("PTMPersonalTaskManager.Domain.Entities.Profile", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Age")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Bio")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateOnly>("DateCreated")
+                        .HasColumnType("date");
+
+                    b.Property<string>("FullName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProfilePicture")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("profile");
+                });
+
             modelBuilder.Entity("PTMPersonalTaskManager.Domain.Entities.TaskProperties", b =>
                 {
                     b.Property<Guid>("Id")
@@ -32,6 +61,9 @@ namespace PTMPersonalTaskManager.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DueDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DueToday")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("ExpiredRefreshToken")
@@ -52,8 +84,14 @@ namespace PTMPersonalTaskManager.Infrastructure.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("TasksCompleted")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TotalTasks")
+                        .HasColumnType("int");
 
                     b.Property<string>("Username")
                         .HasColumnType("nvarchar(max)");
