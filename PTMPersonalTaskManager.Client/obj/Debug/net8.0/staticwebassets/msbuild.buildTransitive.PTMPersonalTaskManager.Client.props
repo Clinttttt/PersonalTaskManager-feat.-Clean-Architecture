@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\PTMPersonalTaskManager.Client.props" />
-</Project>
