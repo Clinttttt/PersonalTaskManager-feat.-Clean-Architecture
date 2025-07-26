@@ -1,0 +1,55 @@
+﻿@using PTMPersonalTaskManager.Client.Components.Pages.Menupage
+@using PTMPersonalTaskManager.Client.Services
+@inherits LayoutComponentBase
+@inject NavigationManager  navigation
+@attribute [StreamRendering]
+@inject PageState pageState
+
+
+
+
+
+    <div class="page">
+        @if (Hides && !HideMenu)
+    {
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+    }
+
+    <main>
+        <!--  <div class="top-row px-2 bg-gradient-to-t from-cyan-100  to-teal-50  border-b border-orange-300 shadow-sm">
+              <img @onclick="()=>pageState.Show()" class=" block sm:hidden icon-hover" src="img/profile-icon.png" alt="Profile icon" width="62" height="62" />
+              <h1 class="text-2xl italic font-bold bg-gradient-to-t from-cyan-400 to-sky-500 bg-clip-text text-transparent">
+                  Personal Task
+              </h1>
+              <img class="block sm:hidden icon-hover " src="img/search-icon.png" alt="search task " width="62" height="62" />
+
+
+          </div>-->
+        <div class="top-row px-2 bg-gradient-to-t from-cyan-100  to-teal-50  border-b border-orange-300 shadow-sm">
+      
+            <Header/>
+
+        </div>
+
+        <article class="content px-4">
+
+            @Body
+       
+    
+        </article>
+    </main>
+</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+
+@code{
+    private bool Hides => !string.IsNullOrEmpty(navigation.ToBaseRelativePath(navigation.Uri));
+    private bool HideMenu => navigation.ToBaseRelativePath(navigation.Uri).Equals("menu", StringComparison.OrdinalIgnoreCase);
+ 
+}

@@ -1,0 +1,9 @@
+﻿@using PTMPersonalTaskManager.Client.Services
+@rendermode InteractiveServer
+@inject PageState pageState
+
+<img @onclick="()=>pageState.Show()" class=" block sm:hidden icon-hover" src="img/profile-icon.png" alt="Profile icon" width="62" height="62" />
+<h1 class="text-2xl italic font-bold bg-gradient-to-t from-cyan-400 to-sky-500 bg-clip-text text-transparent">
+    Personal Task
+</h1>
+<img class="block sm:hidden icon-hover " src="img/search-icon.png" alt="search task " width="62" height="62" />

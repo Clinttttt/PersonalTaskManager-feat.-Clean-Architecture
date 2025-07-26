@@ -1,0 +1,5 @@
+﻿.custom-css {
+
+	border-radius: var(--radius-sm); /* 0.25rem (4px) */
+	border: 2px solid #fcd34d;
+}
