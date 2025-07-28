@@ -3,68 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{07994FDC-9542-41EA-80B6-7CB3BCBCFF5D}|PTMPersonalTaskManager.Api\\PTMPersonalTaskManager.Api.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.api\\controllers\\taskmanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07994FDC-9542-41EA-80B6-7CB3BCBCFF5D}|PTMPersonalTaskManager.Api\\PTMPersonalTaskManager.Api.csproj|solutionrelative:ptmpersonaltaskmanager.api\\controllers\\taskmanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\components\\layout\\header.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\components\\layout\\header.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{07994FDC-9542-41EA-80B6-7CB3BCBCFF5D}|PTMPersonalTaskManager.Api\\PTMPersonalTaskManager.Api.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07994FDC-9542-41EA-80B6-7CB3BCBCFF5D}|PTMPersonalTaskManager.Api\\PTMPersonalTaskManager.Api.csproj|solutionrelative:ptmpersonaltaskmanager.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\components\\pages\\menu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\components\\pages\\menu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3F6DC326-C907-4070-AF54-5B9ECC5BF328}|PTMPersonalTaskManager.Domain\\PTMPersonalTaskManager.Domain.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.domain\\entities\\taskproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F6DC326-C907-4070-AF54-5B9ECC5BF328}|PTMPersonalTaskManager.Domain\\PTMPersonalTaskManager.Domain.csproj|solutionrelative:ptmpersonaltaskmanager.domain\\entities\\taskproperties.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F09EE1E2-4E23-465C-A5BE-D1DA7E52D4A9}|PTMPersonalTaskManager.Infrastructure\\PTMPersonalTaskManager.Infrastructure.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.infrastructure\\services\\profileservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F09EE1E2-4E23-465C-A5BE-D1DA7E52D4A9}|PTMPersonalTaskManager.Infrastructure\\PTMPersonalTaskManager.Infrastructure.csproj|solutionrelative:ptmpersonaltaskmanager.infrastructure\\services\\profileservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F09EE1E2-4E23-465C-A5BE-D1DA7E52D4A9}|PTMPersonalTaskManager.Infrastructure\\PTMPersonalTaskManager.Infrastructure.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.infrastructure\\services\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F09EE1E2-4E23-465C-A5BE-D1DA7E52D4A9}|PTMPersonalTaskManager.Infrastructure\\PTMPersonalTaskManager.Infrastructure.csproj|solutionrelative:ptmpersonaltaskmanager.infrastructure\\services\\taskmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F09EE1E2-4E23-465C-A5BE-D1DA7E52D4A9}|PTMPersonalTaskManager.Infrastructure\\PTMPersonalTaskManager.Infrastructure.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F09EE1E2-4E23-465C-A5BE-D1DA7E52D4A9}|PTMPersonalTaskManager.Infrastructure\\PTMPersonalTaskManager.Infrastructure.csproj|solutionrelative:ptmpersonaltaskmanager.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3F6DC326-C907-4070-AF54-5B9ECC5BF328}|PTMPersonalTaskManager.Domain\\PTMPersonalTaskManager.Domain.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.domain\\entities\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F6DC326-C907-4070-AF54-5B9ECC5BF328}|PTMPersonalTaskManager.Domain\\PTMPersonalTaskManager.Domain.csproj|solutionrelative:ptmpersonaltaskmanager.domain\\entities\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\services\\pagestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\services\\pagestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F6DC326-C907-4070-AF54-5B9ECC5BF328}|PTMPersonalTaskManager.Domain\\PTMPersonalTaskManager.Domain.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.domain\\dtos\\tokenresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F6DC326-C907-4070-AF54-5B9ECC5BF328}|PTMPersonalTaskManager.Domain\\PTMPersonalTaskManager.Domain.csproj|solutionrelative:ptmpersonaltaskmanager.domain\\dtos\\tokenresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3F6DC326-C907-4070-AF54-5B9ECC5BF328}|PTMPersonalTaskManager.Domain\\PTMPersonalTaskManager.Domain.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.domain\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F6DC326-C907-4070-AF54-5B9ECC5BF328}|PTMPersonalTaskManager.Domain\\PTMPersonalTaskManager.Domain.csproj|solutionrelative:ptmpersonaltaskmanager.domain\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\components\\pages\\menupage\\profilepage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\components\\pages\\menupage\\profilepage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\components\\pages\\menu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\components\\pages\\menu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\components\\pages\\menu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\components\\pages\\menu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\components\\pages\\menupage\\homepagerazor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\components\\pages\\menupage\\homepagerazor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\components\\pages\\menupage\\profilepage.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\components\\pages\\menupage\\profilepage.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\wwwroot\\css\\site.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\wwwroot\\css\\site.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|c:\\users\\clint villanueva\\source\\repos\\ptmpersonaltaskmanager\\ptmpersonaltaskmanager.client\\components\\pages\\menupage\\addprofile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5DD6FF3E-659D-4826-9A99-981E82F24D7D}|PTMPersonalTaskManager.Client\\PTMPersonalTaskManager.Client.csproj|solutionrelative:ptmpersonaltaskmanager.client\\components\\pages\\menupage\\addprofile.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -73,72 +57,150 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 110,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 404,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Header.razor",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Layout\\Header.razor",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Components\\Layout\\Header.razor",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Layout\\Header.razor",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Components\\Layout\\Header.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-26T15:35:53.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Counter.razor",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Counter.razor",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Components\\Pages\\Counter.razor",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Counter.razor",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Components\\Pages\\Counter.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-26T15:07:14.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\_Imports.razor",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Components\\_Imports.razor",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\_Imports.razor",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Components\\_Imports.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-26T14:57:40.349Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\App.razor",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Components\\App.razor",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\App.razor",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Components\\App.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-26T13:05:39.088Z",
+              "Title": "Taskmanager.cs",
+              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Infrastructure\\Services\\Taskmanager.cs",
+              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Infrastructure\\Services\\Taskmanager.cs",
+              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Infrastructure\\Services\\Taskmanager.cs",
+              "RelativeToolTip": "PTMPersonalTaskManager.Infrastructure\\Services\\Taskmanager.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T15:04:20.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Components\\Layout\\MainLayout.razor",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Components\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Title": "TaskManagerController.cs",
+              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Api\\Controllers\\TaskManagerController.cs",
+              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Api\\Controllers\\TaskManagerController.cs",
+              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Api\\Controllers\\TaskManagerController.cs",
+              "RelativeToolTip": "PTMPersonalTaskManager.Api\\Controllers\\TaskManagerController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:59:31.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "PTMPersonalTaskManager.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAuwA4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:59:27.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskProperties.cs",
+              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Domain\\Entities\\TaskProperties.cs",
+              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Domain\\Entities\\TaskProperties.cs",
+              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Domain\\Entities\\TaskProperties.cs",
+              "RelativeToolTip": "PTMPersonalTaskManager.Domain\\Entities\\TaskProperties.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:47:49.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProfileServices.cs",
+              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Infrastructure\\Services\\ProfileServices.cs",
+              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Infrastructure\\Services\\ProfileServices.cs",
+              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Infrastructure\\Services\\ProfileServices.cs",
+              "RelativeToolTip": "PTMPersonalTaskManager.Infrastructure\\Services\\ProfileServices.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:13:46.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "PTMPersonalTaskManager.Infrastructure\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:15:38.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Domain\\Entities\\Profile.cs",
+              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Domain\\Entities\\Profile.cs",
+              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Domain\\Entities\\Profile.cs",
+              "RelativeToolTip": "PTMPersonalTaskManager.Domain\\Entities\\Profile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:11:27.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TokenResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Domain\\DTOs\\TokenResponseDto.cs",
+              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Domain\\DTOs\\TokenResponseDto.cs",
+              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Domain\\DTOs\\TokenResponseDto.cs",
+              "RelativeToolTip": "PTMPersonalTaskManager.Domain\\DTOs\\TokenResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:47:40.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Domain\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Domain\\DTOs\\UserDto.cs",
+              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Domain\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "PTMPersonalTaskManager.Domain\\DTOs\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T14:47:39.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AddProfile.razor",
+              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\AddProfile.razor",
+              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\AddProfile.razor",
+              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\AddProfile.razor",
+              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\AddProfile.razor",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-26T11:48:19.827Z",
+              "WhenOpened": "2025-07-28T11:54:58.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Menu.razor",
+              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Menu.razor",
+              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Components\\Pages\\Menu.razor",
+              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Menu.razor",
+              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Components\\Pages\\Menu.razor",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAGwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-26T03:16:05.857Z",
               "EditorCaption": ""
             },
             {
@@ -149,131 +211,10 @@
               "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\ProfilePage.razor",
               "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\ProfilePage.razor",
               "RelativeToolTip": "PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\ProfilePage.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAQwKIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-26T12:05:41.944Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Menu.razor",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Menu.razor",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Components\\Pages\\Menu.razor",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Menu.razor",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Components\\Pages\\Menu.razor",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAAFoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-26T03:16:05.857Z",
+              "WhenOpened": "2025-07-26T12:05:41.944Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Menu.razor.css",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Menu.razor.css",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Components\\Pages\\Menu.razor.css",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Menu.razor.css",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Components\\Pages\\Menu.razor.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-26T12:53:32.635Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Routes.razor",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Routes.razor",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Components\\Routes.razor",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Routes.razor",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Components\\Routes.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-26T13:05:37.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PageState.cs",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Services\\PageState.cs",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Services\\PageState.cs",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Services\\PageState.cs",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Services\\PageState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T13:44:09.948Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Program.cs",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Program.cs",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Program.cs",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T13:48:26.17Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "HomePagerazor.razor",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\HomePagerazor.razor",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\HomePagerazor.razor",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\HomePagerazor.razor",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\HomePagerazor.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-07-26T12:05:40.27Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ProfilePage.razor.css",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\ProfilePage.razor.css",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\ProfilePage.razor.css",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\ProfilePage.razor.css",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Components\\Pages\\Menupage\\ProfilePage.razor.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-26T12:53:31.105Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MainLayout.razor.css",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Layout\\MainLayout.razor.css",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\Components\\Layout\\MainLayout.razor.css",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\Components\\Layout\\MainLayout.razor.css",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\Components\\Layout\\MainLayout.razor.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFsAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-26T12:53:42.754Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-26T12:22:34.311Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "site.min.css",
-              "DocumentMoniker": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\css\\site.min.css",
-              "RelativeDocumentMoniker": "PTMPersonalTaskManager.Client\\wwwroot\\css\\site.min.css",
-              "ToolTip": "C:\\Users\\Clint Villanueva\\source\\repos\\PTMPersonalTaskManager\\PTMPersonalTaskManager.Client\\wwwroot\\css\\site.min.css",
-              "RelativeToolTip": "PTMPersonalTaskManager.Client\\wwwroot\\css\\site.min.css",
-              "ViewState": "AgIAAJcAAAAAAAAAAAAAAL0AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-07-26T12:20:26.864Z"
             }
           ]
         }

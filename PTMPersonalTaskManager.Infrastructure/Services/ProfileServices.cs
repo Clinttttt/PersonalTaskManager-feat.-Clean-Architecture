@@ -19,13 +19,12 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
 
         public async Task<ProfileDto> AddProfile(Profile profile)
         {
-          
+       
             var profiles = new Profile
             {
                 Id = profile.Id,
                 FullName = profile.FullName,
-                Age = profile.Age,
-                Bio = profile.Bio,
+               PhoneNumber = profile.PhoneNumber,
                 ProfilePicture = profile.ProfilePicture
             };
             var filter = profiles.Adapt<ProfileDto>();
@@ -38,6 +37,10 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
 
             return await context.profile.Where(u => u.Id == id).ToListAsync();
         }
+  
+
+
+        
 
 
 

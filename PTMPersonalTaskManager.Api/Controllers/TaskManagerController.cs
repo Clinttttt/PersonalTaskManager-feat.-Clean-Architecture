@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using PTMPersonalTaskManager.Domain.DTOs;
 using PTMPersonalTaskManager.Domain.Entities;
 using PTMPersonalTaskManager.Domain.Interfaces;
@@ -73,10 +74,16 @@ namespace PTMPersonalTaskManager.Api.Controllers
             {
                 return BadRequest("Login First");
             }
-            var parse = Guid.Parse(find.Value);
+            var userId = Guid.Parse(find.Value);
             var filter = profile.Adapt<Profile>();
-            filter.Id = parse;
+            filter.Id = userId;
+           var CheckProfile = await profileServices.DisplayProfile(userId);
+            if(!CheckProfile.IsNullOrEmpty())
+            {
+                return BadRequest("Already Have an Account");
+            }
             var request = await profileServices.AddProfile(filter);
+
             return Ok(request);
         }
         [Authorize]

@@ -1,31 +1,162 @@
 ﻿@page "/ProfilePage"
 @rendermode InteractiveServer
 
-<div class="absolute bg-secondary custom-css left-1/2 h-83  top-40 -translate-x-[45%] w-[80%] md:w-[50%]">
-   <div class="relative">
-     <img src="/img/monalisa.png" alt="monalisa " width="100" height="100"  class="absolute top-10 right-1"/>
+<div class="top-50 xs:top-40 absolute left-1/2 bg-gradient-to-b from-sky-300 to-cyan-300 custom-css h-93  top-40 -translate-x-[50%] sm:-translate-x-[50%] w-[100%] md:w-[50%]">
+   <div class="relative ">
+        <!--<img src="/img/monalisa.png" alt="monalisa " width="100" height="100"  class="absolute top-10 right-1"/>-->
 
-         <div class=" absolute top-2 left-2 rounded-full w-42 overflow-hidden h-42 border border-2 border-orange-200">
-                  <img class=" w-full h-full  object-cover " src="/img/clint.jpg" />
-        </div>
+        <div class="absolute top-0 left-0 w-full h-26 bg-cyan-100 rounded-t-md"></div>
+   
+            <div class=" w-20 h-20  absolute top-3 left-3 rounded-full  overflow-hidden  border border-teal-500">
+                <img class=" w-full h-full  object-cover " src="/img/clint.jpg" />
+            </div>
+            <div class=" absolute top-4 left-5 inline-grid *:[grid-area:1/1]">
+                <div class=" status status-error animate-ping w-3 h-3 rounded-full bg-teal-400"></div>
+                <div class="status status-error w-3 h-3 rounded-full bg-teal-400"></div>
+            </div>
+
+           <div class="left-25 top-6 absolute ">
+                <ul>
+                <li class="font-semibold text-md bg-gradient-to-t from-cyan-500 to-emerald-600 bg-clip-text text-transparent">Clint Villanueva</li>
+                <li class="font-semibold text-md bg-gradient-to-t from-cyan-500 to-emerald-600 bg-clip-text text-transparent italic">09384326772</li>
+                </ul>
+           </div>
+
+        <div class="absolute top-3 right-3 sm:right-6">
+
+
+            <div class="stats shadow w-30 h-20 bg-gradient-to-t from-teal-300 to-cyan-400">
+                <div class="stat text-center">
+                    <div class="stat-title text-sm font-bold">Total Task</div>
+                    <div class="stat-value text-sm bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">89,400</div>
+
+                </div>
+            </div>
+           </div>
+
+
+
+        <div class="top-26 absolute w-full" style="border:solid 1px rgba(0,0,0,0.2)"></div>
+        
+
+
+
+
+     <div class="left-1/2 absolute -translate-x-[50%]">
+            <div class="stats top-28  bg-cyan-100 border-base-300 border">
+                <div class="stat">
+                    <div class="stat-title text-sky-800">Account balance</div>
+                    <div class="stat-value bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">$89,400</div>
+                    <div class="stat-actions">
+                        <button class="btn btn-xs text-cyan-100 bg-gradient-to-t from-teal-400 to-cyan-500">Add funds</button>
+                    </div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-title text-sky-800">Current balance</div>
+                    <div class="stat-value bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">$89,400</div>
+                    <div class="stat-actions">
+                        <button class="btn btn-xs bg-teal-100 border-sky-300 text-cyan-700 text-cyan-700">Withdrawal</button>
+                        <button class="btn btn-xs bg-teal-100 border-sky-300 text-cyan-700">Deposit</button>
+                    </div>
+                </div>
+            </div>
+     </div>
+
+
+        <div class="top-64 left-1/2 absolute -translate-x-[50%] stats shadow">
+
+            <div class="stats stats-horizontal shadow w-64 bg-gradient-to-b from-sky-300 to-cyan-200">
+              
+                <div class="stat">
+                    <div class="stat-title text-sky-800">View all Tasks</div>
+                    <div class="stat-value text-lg bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">4,200</div>
+                    <div class="stat-desc">↗︎ 400 (22%)</div>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-title text-sky-800">Important Tasks</div>
+                    <div class="stat-value text-lg bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">1,200</div>
+                    <div class="stat-desc">↘︎ 90 (14%)</div>
+                </div>
+            </div>
+            </div>
+            
+   <!--Chat-->
+        <div class="top-95 left-1/2 -translate-x-[50%] border absolute w-[100%] h-80 border-sky-300 bg-gradient-to-t from-cyan-200 to-sky-300 rounded-sm">
+            <div class="chat chat-start">
+                <div class="chat-image avatar">
+                    <div class="w-10 rounded-full">
+                        <img alt="Tailwind CSS chat bubble component"
+                             src="/img/liama2.png"  />
+                    </div>
+                </div>
+                <div class="chat-header text-sky-800">
+                    liama
+                    <time class="text-xs opacity-50">12:45</time>
+                </div>
+                <div class="chat-bubble bg-sky-100 text-cyan-800">You were the Chosen One!</div>
+                <div class="chat-footer opacity-50">Delivered</div>
+            </div>
+            <div class="chat chat-end ">
+                <div class="chat-image avatar ">
+                    <div class="w-10 rounded-full mr-1 ">
+                        <img alt="Tailwind CSS chat bubble component"
+                             src="/img/clint.jpg" />
+                    </div>
+                </div>
+                <div class="chat-header text-sky-800">
+                    Clint
+                    <time class="text-xs opacity-50">12:46</time>
+                </div>
+                <div class="chat-bubble bg-sky-100 text-cyan-800">I hate you!</div>
+                <div class="chat-footer opacity-50">Seen at 12:46</div>
+            </div>
+            <!--  <div class="absolute flex left-1/2 -translate-x-[50%] top-68  ">
+                       <input type="text" placeholder="Whats on Your mind" class="w-full border" />
+              </div>-->
+            <div class="absolute flex left-1/2 -translate-x-[50%] top-65 w-[80%] ">
+
+                <div class="relative w-full max-w-xl">
+
+                    <input type="text"
+                           placeholder="What's on your mind"
+                           class="text-md bg-gradient-to-b from-sky-100 to-cyan-100  border-sky-300 w-full h-11 pr-24 border focus:ring-2 focus:outline-none focus:ring-cyan-500 rounded-xl pl-2   " />
+
+
+                    <button class="bg-gradient-to-t from-teal-300 to-cyan-300 border-sky-300 absolute top-1/2 -translate-y-1/2 right-1 h-8 px-4 text-sm bg-primary text-white rounded-md">
+                        Send
+                    </button>
+                </div>
+
+            </div>
+          </div>
+
+  
+
+
+
+
+        <!--  <h1 class="top-25 left-2 text-lg text-neutral font-bold absolute italic  ">Clint Villanueva</h1>
+          <h1 class="top-30 left-2 text-md text-cyan-800 font-semibold absolute italic  ">Gender:&nbsp;Male</h1>
+          <h1 class="top-35 left-2 text-md text-cyan-800 font-semibold absolute italic  ">Age:&nbsp;20</h1>
+        <div class="absolute top-45 left-2 flex">
+
+              <h1 class="text-md font-semibold text-cyan-700 italic underline w-30"> whether it's daily goals or long-term plans. Progress happens at a time</h1>
+              <img src="/img/design-icon.png" width="32" height="32" />
+          </div>-->
         <!--<h1 class="text-2xl text-orange-600 italic font-bold top-2 left-2 absolute text-shadow-md">Profile Information</h1>-->
-        <h1 class="text-2xl text-orange-500 italic font-bold absolute top-1 right-2"
-            style="
-    text-shadow:
-      -2px -2px 0 #fed7aa,   /* orange-200 */
-      -1px -1px 0 #fdba74,   /* orange-300 */
-       1px 1px 0 #fb923c,    /* orange-400 */
-       2px 2px 0 #f97316;    /* orange-500 */
-  ">
-            Profile Information
-        </h1>
+        <!-- <div class="top-27 absolute w-full" style="border:solid 1px rgba(0,0,0,0.2)"></div>
+              <h1 class="text-md absolute top-1 right-2 italic font-bold bg-gradient-to-b from-cyan-400 to-sky-500 bg-clip-text text-transparent">
+                  Profile
+              </h1>-->
 
  <h1 class="absolute text-yellow-900 top-45 left-2"></h1>
 
 
     </div>
 </div>
-
 @code {
 
 }
+
