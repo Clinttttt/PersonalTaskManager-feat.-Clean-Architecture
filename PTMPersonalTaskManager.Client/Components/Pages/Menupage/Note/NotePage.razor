@@ -1,0 +1,87 @@
+﻿@using PTMPersonalTaskManager.Client.Services
+@inject PageState pageState
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+
+
+
+<div class="top-50 xs:top-40 93 md:h-89 absolute left-1/2 border-sky-200  border bg-cyan-100 custom-css  top-40 -translate-x-[50%] sm:-translate-x-[50%] w-[100%] md:w-[50%]">
+    <div class="relative ">
+        <div class=" absolute w-full rounded-t-md top-0 left-0 h-15 bg-gradient-to-b from-sky-300 to-cyan-300 "></div>
+        <h1 class=" text-2xl sm:text-3xl top-3 sm:top-2 left-3  font-bold absolute bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent ">Notes</h1>
+        <div class=" top-4  left-1/2 -translate-x-[50%]  absolute text-center  ">
+            <h2 class="mr-7 sm:text-center italic bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent underline">"Your task, Your story" </h2>
+        </div>
+        <button onclick="my_modal_5.showModal()" class=" text-sky-800 bg-gradient-to-t from-teal-100 to-cyan-100 absolute right-2 top-2 btn text-center rounded-sm">Add Tasks</button>
+        <div class="top-15 absolute w-full" style="border:solid 1px rgba(0,0,0,0.2)"></div>
+
+
+
+
+        @if (ShowNoteCard)
+        {
+            <NoteCard />
+        }
+        else if (displaynotes)
+        {
+            <DisplayNote/>
+        }
+
+
+
+
+
+        <!--Modl-->
+        <dialog id="my_modal_5" class="  modal modal-bottom sm:modal-middle ">
+            <div class="modal-box relative bg-gradient-to-t from-cyan-100 to-sky-100">
+                <input type="text" class="border-0  focus:outline-none text-sky-800 w-[30%]" placeholder="Title here!" style="border-bottom: solid 1px rgba(0, 177, 191)" />
+                <div class="my-6 flex flex-row gap-3 ">
+                    <textarea class="w-[71%] xs:w-[75%] text-sky-900 textarea h-34 focus:ring-0 focus:outline-none border-0 rounded-sm resize-none" placeholder="Whats on your mind?" style="border: solid 1px rgba(0, 177, 191)"></textarea>
+
+                    <form class="right-3 xs:right-4 top-6 filter flex flex-col gap-2 absolute ">
+                        <input class="btn btn-square bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md" type="reset" value="×" />
+                        <input class="btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md" type="radio" name="frameworks" aria-label="Chill Notes" />
+                        <input class="btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md" type="radio" name="frameworks" aria-label="Focus Task" />
+                        <input class="btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md" type="radio" name="frameworks" aria-label="Beast Mode" />
+                       
+                    </form>
+                 
+                </div>
+                <div class="modal-action ">
+                    <form method="dialog" class="flex flex gap-2">
+                     
+                        <input type="datetime-local" class="input w-[55%] text-sky-800 bg-gradient-to-t from-teal-100 to-cyan-100 border-cyan-700 rounded-sm" />
+                        <button class="btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">Save</button>
+                        <button class="btn text-sky-800 bg-gradient-to-t from-teal-100 to-cyan-100 border-cyan-700 rounded-sm">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+
+    </div>
+</div>
+
+
+
+@code {
+    private bool ShowNoteCard => pageState.HideCard;
+    private bool displaynotes => pageState.DisplayNotes;
+    private void ShowByDefault()
+    {
+        pageState.Reset();
+    }
+    private void Hides() { ShowByDefault(); pageState.Hide(); }
+    protected override void OnInitialized()
+    {
+
+        pageState.OnChange += StateHasChanged;
+    }
+    public void Dispose()
+    {
+        pageState.OnChange -= StateHasChanged;
+    }
+
+}
+
+

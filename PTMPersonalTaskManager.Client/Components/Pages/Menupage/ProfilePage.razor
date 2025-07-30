@@ -1,7 +1,7 @@
 ﻿@page "/ProfilePage"
 @rendermode InteractiveServer
 
-<div class="top-50 xs:top-40 absolute left-1/2 bg-gradient-to-b from-sky-300 to-cyan-300 custom-css h-93  top-40 -translate-x-[50%] sm:-translate-x-[50%] w-[100%] md:w-[50%]">
+<div class="top-50 xs:top-40  93 md:h-89 absolute left-1/2 bg-gradient-to-b from-sky-300 to-cyan-300 custom-css h-93  top-40 -translate-x-[50%] sm:-translate-x-[50%] w-[100%] md:w-[50%]">
    <div class="relative ">
         <!--<img src="/img/monalisa.png" alt="monalisa " width="100" height="100"  class="absolute top-10 right-1"/>-->
 
@@ -17,17 +17,17 @@
 
            <div class="left-25 top-6 absolute ">
                 <ul>
-                <li class="font-semibold text-md bg-gradient-to-t from-cyan-500 to-emerald-600 bg-clip-text text-transparent">Clint Villanueva</li>
-                <li class="font-semibold text-md bg-gradient-to-t from-cyan-500 to-emerald-600 bg-clip-text text-transparent italic">09384326772</li>
+                <li class="font-semibold text-md bg-gradient-to-t from-cyan-500 to-emerald-600 bg-clip-text text-transparent w-[100%]">Clint Villanueva</li>
+                <li class="font-semibold text-md bg-gradient-to-t from-cyan-500 to-emerald-600 bg-clip-text text-transparent italic w-[100%]">09384326772</li>
                 </ul>
            </div>
 
         <div class="absolute top-3 right-3 sm:right-6">
 
 
-            <div class="stats shadow w-30 h-20 bg-gradient-to-t from-teal-300 to-cyan-400">
+            <div class="stats shadow w-30 h-20 bg-gradient-to-t from-teal-300 to-cyan-400  md:left-2">
                 <div class="stat text-center">
-                    <div class="stat-title text-sm font-bold">Total Task</div>
+                    <div class="stat-title text-sm font-bold">Completed</div>
                     <div class="stat-value text-sm bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">89,400</div>
 
                 </div>
@@ -45,45 +45,46 @@
      <div class="left-1/2 absolute -translate-x-[50%]">
             <div class="stats top-28  bg-cyan-100 border-base-300 border">
                 <div class="stat">
-                    <div class="stat-title text-sky-800">Account balance</div>
-                    <div class="stat-value bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">$89,400</div>
+                    <div class="stat-title text-sky-800">Current Tasks</div>
+                    <div class="font-bold text-lg md:text-2xl font-bold stat-value bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">Critical Tasks</div>
                     <div class="stat-actions">
-                        <button class="btn btn-xs text-cyan-100 bg-gradient-to-t from-teal-400 to-cyan-500">Add funds</button>
+                        <button class=" btn btn-xs text-cyan-100 bg-gradient-to-t from-teal-400 to-cyan-500">View Tasks</button>
                     </div>
                 </div>
 
+                <!--all t-->
                 <div class="stat">
-                    <div class="stat-title text-sky-800">Current balance</div>
-                    <div class="stat-value bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">$89,400</div>
+                    <div class="stat-title text-sky-800">All Tasks</div>
+                    <div class="stat-value bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">20</div>
                     <div class="stat-actions">
-                        <button class="btn btn-xs bg-teal-100 border-sky-300 text-cyan-700 text-cyan-700">Withdrawal</button>
-                        <button class="btn btn-xs bg-teal-100 border-sky-300 text-cyan-700">Deposit</button>
+                        <button class="btn btn-xs bg-teal-100 border-sky-300 text-cyan-700 text-cyan-700">View All Tasks</button>
+                        <button class="btn btn-xs bg-teal-100 border-sky-300 text-cyan-700">Update</button>
                     </div>
                 </div>
             </div>
      </div>
 
 
-        <div class="top-64 left-1/2 absolute -translate-x-[50%] stats shadow">
+        <div class="top-62 left-1/2 absolute -translate-x-[50%] stats shadow">
 
             <div class="stats stats-horizontal shadow w-64 bg-gradient-to-b from-sky-300 to-cyan-200">
               
                 <div class="stat">
-                    <div class="stat-title text-sky-800">View all Tasks</div>
-                    <div class="stat-value text-lg bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">4,200</div>
+                    <div class="stat-title text-sky-800">Tasks Today </div>
+                    <div class="stat-value text-lg bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">200</div>
                     <div class="stat-desc">↗︎ 400 (22%)</div>
                 </div>
 
                 <div class="stat">
-                    <div class="stat-title text-sky-800">Important Tasks</div>
-                    <div class="stat-value text-lg bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">1,200</div>
-                    <div class="stat-desc">↘︎ 90 (14%)</div>
+                    <div class="stat-title text-sky-800">Progress Tasks</div>
+                    <div class="stat-value text-lg bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">14%</div>
+                    <div class="stat-desc">↘︎ 90 (143)</div>
                 </div>
             </div>
             </div>
             
    <!--Chat-->
-        <div class="top-95 left-1/2 -translate-x-[50%] border absolute w-[100%] h-80 border-sky-300 bg-gradient-to-t from-cyan-200 to-sky-300 rounded-sm">
+        <div class="top-95 left-1/2 -translate-x-[50%] border absolute w-[100%] h-80 border-sky-300 bg-gradient-to-t from-cyan-200 to-sky-300 rounded-sm md:hidden">
             <div class="chat chat-start">
                 <div class="chat-image avatar">
                     <div class="w-10 rounded-full">

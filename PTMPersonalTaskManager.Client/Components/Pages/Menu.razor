@@ -1,16 +1,18 @@
 ﻿@page "/menu"
 @using PTMPersonalTaskManager.Client.Components.Pages.Menupage
+@using PTMPersonalTaskManager.Client.Components.Pages.Menupage.Note
 @using PTMPersonalTaskManager.Client.Services
 @rendermode InteractiveServer
-@inject NavigationManager navigation
 @attribute [StreamRendering]
+@inject NavigationManager navigation
+
 @inject PageState pageState
-<div class="relative parent-div h-screen flex flex-col lg:flex justify-center flex-row gap-10">
+<div class="relative parent-div overflow-hidden  h-screen flex flex-col lg:flex justify-center flex-row gap-10">
 
 
 
-@*
-    <div class="  lg:flex hidden lg:absolute mt-5 ">
+
+    <div class=" hidden md:flex left-0 absolute mt-5 overflow-hidden">
         <!-- Sidebar -->
         <div class="@SidebarClass bg-base-300 h-30 transition-all duration-300 overflow-hidden" style="border:solid 1px rgba(0,0,0,0.2)">
             <h2 class="text-xl font-bold mb-4">Sidebar</h2>
@@ -38,22 +40,69 @@
 
 
         </div>
-    </div>*@
+    </div>
+
+
+
+
+    <!--chat-->
+    <div class="hidden md:block top-40 left-0 93 md:h-89 border absolute w-[23%] h-80 border-sky-300 bg-gradient-to-t from-cyan-300 to-sky-300 rounded-sm ">
+        <div class="chat chat-start">
+            <div class="chat-image avatar">
+                <div class="w-10 rounded-full">
+                    <img alt="Tailwind CSS chat bubble component"
+                         src="/img/liama2.png" />
+                </div>
+            </div>
+            <div class="chat-header text-sky-800">
+                liama
+                <time class="text-xs opacity-50">12:45</time>
+            </div>
+            <div class="chat-bubble bg-sky-100 text-cyan-800 text-sm">You were the Chosen One!</div>
+            <div class="chat-footer opacity-50">Delivered</div>
+        </div>
+        <div class="chat chat-end ">
+            <div class="chat-image avatar ">
+                <div class="w-10 rounded-full mr-1 ">
+                    <img alt="Tailwind CSS chat bubble component"
+                         src="/img/clint.jpg" />
+                </div>
+            </div>
+            <div class="chat-header text-sky-800">
+                Clint
+                <time class="text-xs opacity-50">12:46</time>
+            </div>
+            <div class="chat-bubble bg-sky-100 text-cyan-800 text-sm">I hate you!</div>
+            <div class="chat-footer opacity-50">Seen at 12:46</div>
+        </div>
+        <!--  <div class="absolute flex left-1/2 -translate-x-[50%] top-68  ">
+                   <input type="text" placeholder="Whats on Your mind" class="w-full border" />
+          </div>-->
+        <div class="absolute flex left-1/2 -translate-x-[50%] top-75 w-[80%] ">
+
+            <div class="relative w-full max-w-xl">
+
+                <input type="text"
+                       placeholder="What's on your mind"
+                       class="custom-placeholder text-md bg-gradient-to-b from-sky-100 to-cyan-100  border-sky-300 w-full h-11 pr-24 border focus:ring-2 focus:outline-none focus:ring-cyan-500 rounded-xl pl-2   " />
+
+
+                <button class="bg-gradient-to-t from-teal-300 to-cyan-300 border-sky-300 absolute top-1/2 -translate-y-1/2 right-1 h-8 px-4 text-sm bg-primary text-white rounded-md">
+                    Send
+                </button>
+            </div>
+
+        </div>
+    </div>
 
 
 
 
 
+    <div class="hidden md:block absolute w-[23%] top-40 right-0 93 md:h-89 self-center bg-base-300" style="border:solid 1px rgba(0,0,0,0.2)">
 
 
-
-
-
-
-    <!--  <div class="w-76 h-83 mt-16 self-center bg-base-300" style="border:solid 1px rgba(0,0,0,0.2)">
-
-
-      </div>-->
+          </div>
 
 
 
@@ -67,16 +116,17 @@
         <img @onclick="()=> showCard()" class=" icon-hover" src="img/card-icon.png" alt="card" width="62" height="62" />
         <img @onclick="()=> search()" class="hidden sm:block icon-hover" src="img/search-icon.png" alt="search task " width="62" height="62" />
         <img @onclick="()=> dashboard()" class="icon-hover" src="img/dashboard-icon.png" alt="dashboard " width="62" height="62" />
+  
     </div>
 
 
 
 
 
-    <!--
-        <div class="w-60 h-118 mb-19 self-center bg-base-300 -translate-x-[1%]">
-        </div>
-    -->
+
+   <!-- <div class="w-[40%] h-118 mb-19 self-center bg-base-300 -translate-x-[1%]">
+        </div>-->
+
     <!--Core-->
    @if (ShowCalendar)
     {
@@ -115,6 +165,8 @@
     {
         <AddProfile />
     }
+  
+
 </div>
 
 
@@ -138,6 +190,7 @@
     private bool ShowDashboard = false;
 
 
+
     private string SidebarClass => isSidebarOpen ? "w-64" : "w-0";
     private string ContentStyle => isSidebarOpen ? "margin-left: 0;" : "margin-left: 0;";
 
@@ -158,6 +211,7 @@
         ShowSearh = false;
         ShowDashboard = false;
         pageState.Reset();
+
     }
 
     private void showCalendar() { ResetPages(); ShowCalendar = true; }
@@ -169,7 +223,7 @@
     private void note() { ResetPages(); ShowNote = true; }
     private void search() { ResetPages(); ShowSearh = true; }
     private void dashboard() { ResetPages(); ShowDashboard = true; }
-
+ 
     protected override void OnInitialized()
     {
 
