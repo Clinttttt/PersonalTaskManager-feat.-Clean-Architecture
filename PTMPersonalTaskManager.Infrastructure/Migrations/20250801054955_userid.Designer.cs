@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PTMPersonalTaskManager.Infrastructure.Data;
 
@@ -11,9 +12,11 @@ using PTMPersonalTaskManager.Infrastructure.Data;
 namespace PTMPersonalTaskManager.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250801054955_userid")]
+    partial class userid
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,11 +63,24 @@ namespace PTMPersonalTaskManager.Infrastructure.Migrations
                     b.Property<DateTime>("DueToday")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime>("ExpiredRefreshToken")
+                        .HasColumnType("datetime2");
+
                     b.Property<bool>("IsCompleted")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Priority")
                         .HasColumnType("int");
+
+                    b.Property<Guid?>("ProfilesId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
@@ -81,34 +97,24 @@ namespace PTMPersonalTaskManager.Infrastructure.Migrations
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
-
-                    b.ToTable("taskProperties");
-                });
-
-            modelBuilder.Entity("PTMPersonalTaskManager.Domain.Entities.User", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("ExpiredRefreshToken")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RefreshToken")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("user");
+                    b.HasIndex("ProfilesId");
+
+                    b.ToTable("taskProperties");
+                });
+
+            modelBuilder.Entity("PTMPersonalTaskManager.Domain.Entities.TaskProperties", b =>
+                {
+                    b.HasOne("PTMPersonalTaskManager.Domain.Entities.Profile", "Profiles")
+                        .WithMany()
+                        .HasForeignKey("ProfilesId");
+
+                    b.Navigation("Profiles");
                 });
 #pragma warning restore 612, 618
         }

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using PTMPersonalTaskManager.Domain.Interfaces;
 using PTMPersonalTaskManager.Infrastructure.Data;
@@ -45,6 +46,8 @@ namespace PTMPersonalTaskManager.Infrastructure
              NameClaimType = ClaimTypes.Name
          };
      });
+            services.AddScoped<AuthApiServices>();
+            services.AddScoped<TaskManagerApiServices>();
 
 
 

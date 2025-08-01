@@ -1,10 +1,11 @@
 ﻿using Mapster;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using PTMPersonalTaskManager.Domain.DTOs;
+using PTMPersonalTaskManager.Domain.DTOs.DetailsDto;
 using PTMPersonalTaskManager.Domain.Entities;
 using PTMPersonalTaskManager.Domain.Interfaces;
 using PTMPersonalTaskManager.Infrastructure.Data;
+using PTMPersonalTaskManager.Infrastructure.Migrations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,37 +17,31 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
 {
     public class Taskmanager(ApplicationDbContext context) : ITaskmanager
     {
-        public async Task<IEnumerable<TaskProperties>> ListData()
-        {
-            return await context.taskProperties.ToListAsync();
+        public async Task<IEnumerable<DetailsDto>?> ListData(Guid Userid)
+        {        var task =  await context.taskProperties.Where(u=> u.UserId == Userid).
+                ToListAsync();
+            return task.Adapt<List<DetailsDto>>();
         }
 
 
-        public async Task<DetailsDto?> CreateData(TaskProperties create)
+        public async Task<DetailsDto?> CreateData( TaskProperties create)
         {
-        
-            var Details = new TaskProperties
-            {
-                Title = create.Title,
-                Description = create.Description,
-                StartDate = create.StartDate,
-                DueDate = create.DueDate
-            };
-            context.taskProperties.Add(Details);
+
+            context.taskProperties.Add(create);
             await context.SaveChangesAsync();
+            return create.Adapt<DetailsDto>();
 
-            return Details.Adapt<DetailsDto>();
         }
-        public async Task<TaskProperties?> TaskReadData(Guid id)
+        public async Task<DetailsDto?> TaskReadData(Guid id)
         {
             var find = await context.taskProperties.FirstOrDefaultAsync(u => u.Id == id);
             if (find is null)
             {
                 return null;
             }
-            return find;
+            return find.Adapt<DetailsDto>();
         }
-        public async Task<TaskProperties?> UpdateData(DetailsDto update)
+        public async Task<DetailsDto?> UpdateData(UpdateTaskDto update)
         {
             var find = await context.taskProperties.FindAsync(update.Id);
             if (find is null)
@@ -57,12 +52,14 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
             find.Title = update.Title;
             find.Description = update.Description;
             find.DueDate = update.DueDate;
+            find.IsCompleted = update.IsCompleted;
+            find.Priority = update.Priority;
 
             context.Update(find);
             await context.SaveChangesAsync();
-            return find.Adapt<TaskProperties>();
+            return find.Adapt<DetailsDto>();
         }
-        public async Task<TaskProperties?> DeleteData(Guid id)
+        public async Task<DetailsDto?> DeleteData(Guid id)
         {
             var delete = await context.taskProperties.FindAsync(id);
             if (delete is null)
@@ -71,7 +68,7 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
             }
             context.taskProperties.Remove(delete);
             await context.SaveChangesAsync();
-            return delete;
+            return delete.Adapt<DetailsDto>();
         }
 
 

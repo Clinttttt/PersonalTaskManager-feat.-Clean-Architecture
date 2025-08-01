@@ -1,6 +1,7 @@
 using PTMPersonalTaskManager.Client.Components;
 using PTMPersonalTaskManager.Client.Services;
 using PTMPersonalTaskManager.Infrastructure;
+using PTMPersonalTaskManager.Infrastructure.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,8 +9,11 @@ builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddScoped<PageState>();
 
 
+builder.Services.AddHttpClient<AuthApiServices>(client =>
+  client.BaseAddress = new Uri("https://localhost:7003"));
 
-
+builder.Services.AddHttpClient<TaskManagerApiServices>(client =>
+client.BaseAddress = new Uri("https://localhost:7003"));
 
 
 

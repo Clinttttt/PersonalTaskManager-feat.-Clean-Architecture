@@ -1,6 +1,88 @@
-﻿<div class="top-50 xs:top-40 93 md:h-89 absolute left-1/2 bg-gradient-to-b from-sky-300 to-cyan-300 custom-css   top-40 -translate-x-[50%] sm:-translate-x-[50%] w-[100%] md:w-[50%]">
-    <h1>search</h1>
+﻿
+<div class="top-50 xs:top-40 absolute left-1/2 border-sky-300 rounded-sm bg-gradient-to-t from-cyan-100 to-cyan-50 custom-css h-85  top-40 -translate-x-[50%] sm:-translate-x-[50%] w-[100%] md:w-[50%]" style="border:solid 1px rgba(0,0,0,0.2)">
+
+    <div class="relative px-4 pt-8 flex flex-col items-center gap-3">
+        <!--image-->
+        <div class="w-20 h-20 rounded-full overflow-hidden border border-teal-500">
+            <img class="w-full h-full object-cover" src="/img/clint.jpg" />
+        </div>
+
+        <!--input-->
+        <fieldset class="w-full max-w-sm ">
+            <legend class="fieldset-legend text-xs text-sky-800">Add Profile Image</legend>
+            <input type="file" class="file-input h-8 w-full
+                   file:text-cyan-100
+                   file:bg-gradient-to-t file:from-teal-400 file:to-cyan-500
+                   file:rounded-md file:border-none
+                   file:px-4
+                   file:hover:brightness-110
+                   bg-gradient-to-t from-teal-50 to-cyan-50
+                   text-sky-800
+                  rounded-lg
+
+" style="border:1px solid rgba(0,0,0,0.2)" />
+
+        </fieldset>
+
+
+        <!--fullname-->
+        <label class="input validator max-w-sm w-full h-8 rounded-lg text-sky-800 focus:outline-none " style="border:1px solid rgba(0,0,0,0.2)">
+            <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g stroke-linejoin="round"
+                   stroke-linecap="round"
+                   stroke-width="2.5"
+                   fill="none"
+                   stroke="currentColor">
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </g>
+            </svg>
+            <input type="text"
+                   required
+                   placeholder="Username"
+                   pattern="[A-Za-z][A-Za-z0-9\-]*"
+                   minlength="3"
+                   maxlength="30"
+                   title="Only letters, numbers or dash" />
+        </label>
+        <!--Number-->
+        <label class="input validator w-full max-w-sm h-8 rounded-lg text-sky-800" style="border:1px solid rgba(0,0,0,0.2)">
+            <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <g fill="none">
+                    <path d="M7.25 11.5C6.83579 11.5 6.5 11.8358 6.5 12.25C6.5 12.6642 6.83579 13 7.25 13H8.75C9.16421 13 9.5 12.6642 9.5 12.25C9.5 11.8358 9.16421 11.5 8.75 11.5H7.25Z"
+                          fill="currentColor"></path>
+                    <path fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6 1C4.61929 1 3.5 2.11929 3.5 3.5V12.5C3.5 13.8807 4.61929 15 6 15H10C11.3807 15 12.5 13.8807 12.5 12.5V3.5C12.5 2.11929 11.3807 1 10 1H6ZM10 2.5H9.5V3C9.5 3.27614 9.27614 3.5 9 3.5H7C6.72386 3.5 6.5 3.27614 6.5 3V2.5H6C5.44771 2.5 5 2.94772 5 3.5V12.5C5 13.0523 5.44772 13.5 6 13.5H10C10.5523 13.5 11 13.0523 11 12.5V3.5C11 2.94772 10.5523 2.5 10 2.5Z"
+                          fill="currentColor"></path>
+                </g>
+            </svg>
+            <input type="tel"
+                   class="tabular-nums h-8 "
+                   required
+                   placeholder="Phone"
+                   pattern="[0-9]*"
+                   minlength="10"
+                   maxlength="10"
+                   title="Must be 10 digits" />
+        </label>
+
+        <button type="submit" class="btn self-end bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">Save</button>
+    </div>
+
 </div>
+@code {
+
+}
+
+
+
+
+
+
+
+
+
 
 @code {
 

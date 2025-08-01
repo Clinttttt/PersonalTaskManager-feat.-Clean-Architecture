@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using PTMPersonalTaskManager.Domain.DTOs;
+using PTMPersonalTaskManager.Domain.DTOs.DetailsDto;
 using PTMPersonalTaskManager.Domain.Entities;
 using PTMPersonalTaskManager.Domain.Interfaces;
 using PTMPersonalTaskManager.Infrastructure.Migrations;
@@ -17,19 +18,41 @@ namespace PTMPersonalTaskManager.Api.Controllers
     public class TaskManagerController(ITaskmanager Taskmanager, IProfileServices profileServices) : ControllerBase
     {
         //working
+        [Authorize]
         [HttpGet("ListTask")]
-        public async Task<ActionResult<TaskProperties?>> ToList()
+        public async Task<ActionResult<DetailsDto?>> ToList()
         {
-            var List = await Taskmanager.ListData();
+            var findGuid = User.FindFirst(ClaimTypes.NameIdentifier);
+            if(findGuid == null)
+            {
+                return BadRequest("Login First");
+            }
+            var ConvertGuid = Guid.Parse(findGuid.Value);
+            var List = await Taskmanager.ListData(ConvertGuid);
+            if (List is null)
+            {
+                return BadRequest("Nothing to List");
+            }
             var filter = List.Adapt<List<DetailsDto>>();
+           
             return filter is not null ? Ok(filter) : BadRequest("Nothing to List");
         }
 
         //working
+        [Authorize]
         [HttpPost("CreateData")]
-        public async Task<ActionResult<TaskProperties?>> CreateData([FromBody] DetailsDto create)
+        public async Task<ActionResult<DetailsDto?>> CreateData([FromBody] CreateTaskDto create)
+
         {
+            var findGuid = User.FindFirst(ClaimTypes.NameIdentifier);
+            if(findGuid is null)
+            {
+                return BadRequest("Login First");
+            }
+
+            var ConvertGuid = Guid.Parse(findGuid.Value);           
             var filter = create.Adapt<TaskProperties>();
+            filter.UserId = ConvertGuid;
             var createdata = await Taskmanager.CreateData(filter);
             if (createdata is null)
             {
@@ -41,29 +64,54 @@ namespace PTMPersonalTaskManager.Api.Controllers
 
 
         //working
-        [HttpGet("GetData/{id}")]
-        public async Task<ActionResult<TaskProperties?>> GetData(Guid id)
+        [Authorize]
+        [HttpGet("GetData/{Id}")]
+        public async Task<ActionResult<DetailsDto?>> GetData(Guid Id)
         {
-            var find = await Taskmanager.TaskReadData(id);
+            var FindGuid = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (FindGuid is null)
+            {
+                return BadRequest("Login First");
+            }
+            var ConvertGuid = Guid.Parse(FindGuid.Value);
+            var find = await Taskmanager.TaskReadData(Id);
+            if(find is null || find.UserId != ConvertGuid)
+            {
+                return BadRequest("Data not found");
+            }
             var filter = find.Adapt<DetailsDto>();
-            return filter is not null ? Ok(filter) : BadRequest("Data not found");
+            return filter;
         }
         //working
+        [Authorize]
         [HttpPatch("UpdateData")]
-        public async Task<ActionResult<TaskProperties>> UpdateData(DetailsDto update)
+        public async Task<ActionResult<DetailsDto>> UpdateData(UpdateTaskDto update)
         {
+            var FindGuid = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (FindGuid is null)
+            {
+                return BadRequest("Login First");
+            }
+            var ConvertGuid = Guid.Parse(FindGuid.Value);
 
             var updatedata = await Taskmanager.UpdateData(update);
             var filters = updatedata.Adapt<DetailsDto>();
 
-            return filters is not null ? Ok(filters) : BadRequest("Something went wrong");
+            return filters is not null && filters.UserId == ConvertGuid? Ok(filters) : BadRequest("Something went wrong");
         }
         //working
-        [HttpGet("DeleteData")]
-        public async Task<ActionResult<Taskproperties>> DeleteData(Guid id)
+        [Authorize]
+        [HttpGet("DeleteData{Id}")]
+        public async Task<ActionResult<DetailsDto>> DeleteData(Guid Id)
         {
-            var deletedata = await Taskmanager.DeleteData(id);
-            return deletedata is not null ? Ok(deletedata) : BadRequest("No data");
+            var FindGuid = User.FindFirst(ClaimTypes.NameIdentifier);
+            if(FindGuid is null)
+            {
+                return BadRequest("Login First");
+            }
+            var ConvertGuid = Guid.Parse(FindGuid.Value);
+            var deletedata = await Taskmanager.DeleteData(Id);
+            return deletedata is not null && deletedata.UserId == ConvertGuid ? Ok(deletedata) : BadRequest("No data");
         }
         [Authorize]
         [HttpPost("AddProfile")]

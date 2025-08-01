@@ -10,11 +10,8 @@ namespace PTMPersonalTaskManager.Domain.Entities
     public class TaskProperties
     {
         public Guid Id { get; set; }
-        public string Username { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
+        public Guid UserId { get; set; }     
         public string? Title { get; set; }
-        public string? RefreshToken { get; set; }
-        public DateTime ExpiredRefreshToken { get; set; }
         public string? Description { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime DueDate { get; set; }
@@ -23,8 +20,8 @@ namespace PTMPersonalTaskManager.Domain.Entities
         public int TotalTasks { get; set; }
         public int TasksCompleted { get; set; }
         public DateTime DueToday { get; set; }
-        public Profile? Profiles { get; set; }
-
+       
+        
     }
     public enum TaskPriority
     {

@@ -16,6 +16,7 @@ namespace PTMPersonalTaskManager.Infrastructure.Data
         }
         public DbSet<TaskProperties> taskProperties { get; set; }
         public DbSet<Profile> profile { get; set; }
+        public DbSet<User> user { get; set; }
    
     }
 }

@@ -13,5 +13,6 @@ namespace PTMPersonalTaskManager.Domain.Entities
        public string? ProfilePicture { get; set; }
        public DateOnly DateCreated { get; set; }
         public string? PhoneNumber { get; set; }
+       
     }
 }

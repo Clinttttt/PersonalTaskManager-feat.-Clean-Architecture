@@ -12,7 +12,7 @@ namespace PTMPersonalTaskManager.Domain.Interfaces
     {
 
      Task<TokenResponseDto?> RefreshTokenAsync(RefreshTokenDto request);
-     Task<TaskProperties?> RegisterAsync(UserDto request);
+     Task<User?> RegisterAsync(UserDto request);
      Task<TokenResponseDto?> HandleLogin(UserDto request);
      Task<bool> LogoutAsync(Guid id);
     }

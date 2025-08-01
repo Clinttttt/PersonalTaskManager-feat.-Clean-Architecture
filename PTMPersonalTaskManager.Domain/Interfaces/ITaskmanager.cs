@@ -1,4 +1,4 @@
-﻿using PTMPersonalTaskManager.Domain.DTOs;
+﻿using PTMPersonalTaskManager.Domain.DTOs.DetailsDto;
 using PTMPersonalTaskManager.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -12,9 +12,11 @@ namespace PTMPersonalTaskManager.Domain.Interfaces
     {
 
         Task<DetailsDto?> CreateData(TaskProperties create);
-        Task<IEnumerable<TaskProperties>> ListData();
-        Task<TaskProperties?> TaskReadData(Guid id);
-        Task<TaskProperties?> UpdateData(DetailsDto update);
-        Task<TaskProperties?> DeleteData(Guid id);
+        Task<IEnumerable<DetailsDto>?> ListData(Guid Userid);
+        Task<DetailsDto?> TaskReadData(Guid id);
+        Task<DetailsDto?> UpdateData(UpdateTaskDto update);
+
+        Task<DetailsDto?> DeleteData(Guid id);
     }
 }
+    

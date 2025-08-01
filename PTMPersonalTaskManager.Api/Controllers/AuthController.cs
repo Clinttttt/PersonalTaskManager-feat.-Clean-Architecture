@@ -15,7 +15,7 @@ namespace PTMPersonalTaskManager.Api.Controllers
     public class AuthController(IAuthServices authServices) : ControllerBase
     {
         [HttpPost("Register")]
-        public async Task<ActionResult<TaskProperties>> RegisterAsync(UserDto register)
+        public async Task<ActionResult<User>> RegisterAsync(UserDto register)
         {
             var request = await authServices.RegisterAsync(register);
             if(request is null)
@@ -25,8 +25,9 @@ namespace PTMPersonalTaskManager.Api.Controllers
             }
             return Ok(request);
         }
+        
         [HttpPost("Login")]
-        public async Task<ActionResult<TaskProperties?>> LoginAsync(UserDto request)
+        public async Task<ActionResult<User?>> LoginAsync(UserDto request)
         {
             var user = await authServices.HandleLogin(request);
             if(user is null)

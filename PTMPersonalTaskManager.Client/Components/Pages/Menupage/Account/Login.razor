@@ -1,0 +1,91 @@
+﻿@using PTMPersonalTaskManager.Client.Services
+@inject PageState pageState
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+
+<div class="relative px-4 pt-4 flex flex-col items-center gap-3">
+
+    <!--image-->
+    <div class="w-20 h-20 rounded-full overflow-hidden ">
+        <img class="w-full h-full object-cover" src="/img/profile-icon.png" />
+    </div>
+    <h1 class="text-lg sm:text-2xl font-bold bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">Login Account</h1>
+
+
+
+
+
+    <!--fullname-->
+    <label class="input validator max-w-sm w-full h-8 rounded-lg text-sky-800 focus:outline-none " style="border:1px solid rgba(0,0,0,0.2)">
+        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <g stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="2.5"
+            fill="none"
+            stroke="currentColor">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </g>
+        </svg>
+        <input type="text"
+        required
+        placeholder="Username"
+        pattern="[A-Za-z][A-Za-z0-9\-]*"
+        minlength="3"
+        maxlength="30"
+        title="Only letters, numbers or dash" />
+    </label>
+    <!--Number-->
+    <label class="input validator h-8 max-w-sm w-full h-8 rounded-lg text-sky-800 focus:outline-none " style="border:1px solid rgba(0,0,0,0.2)">
+        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <g stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="2.5"
+            fill="none"
+            stroke="currentColor">
+                <path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"></path>
+                <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
+            </g>
+        </svg>
+        <input type="password"
+        required
+        placeholder="Password"
+        minlength="8"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
+    </label>
+    <p class="validator-hint hidden">
+        Must be more than 8 characters, including
+        <br />At least one number <br />At least one lowercase letter <br />At least one uppercase letter
+    </p>
+
+    <button type="submit" class="btn-wide btn  bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">Login</button>
+    <h5 class="bg-gradient-to-t from-cyan-700 to-sky-800 bg-clip-text text-transparent">Dont have an Account? <span @onclick="()=> HideLogin()" class="cursor-pointer bg-gradient-to-t from-cyan-800 to-sky-800 bg-clip-text text-transparent text-md">Register</span></h5>
+</div>
+
+
+@code {
+
+    private bool hidelogin => pageState.Login;
+
+    private void Reset()
+    {
+        pageState.Reset();
+    }
+    protected override void OnInitialized()
+    {
+        pageState.OnChange += StateHasChanged;
+    }
+    public void Dispose()
+    {
+        pageState.OnChange -= StateHasChanged;
+    }
+    private void HideLogin() { Reset(); pageState.HideLogin(); }
+}
+
+
+
+
+
+
+

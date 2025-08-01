@@ -1,5 +1,6 @@
 ﻿@page "/menu"
 @using PTMPersonalTaskManager.Client.Components.Pages.Menupage
+@using PTMPersonalTaskManager.Client.Components.Pages.Menupage.Account
 @using PTMPersonalTaskManager.Client.Components.Pages.Menupage.Note
 @using PTMPersonalTaskManager.Client.Services
 @rendermode InteractiveServer
@@ -115,7 +116,7 @@
         <img @onclick="()=> note()" class="icon-hover" src="img/note-icon.png" alt="note" width="62" height="62" />
         <img @onclick="()=> showCard()" class=" icon-hover" src="img/card-icon.png" alt="card" width="62" height="62" />
         <img @onclick="()=> search()" class="hidden sm:block icon-hover" src="img/search-icon.png" alt="search task " width="62" height="62" />
-        <img @onclick="()=> dashboard()" class="icon-hover" src="img/dashboard-icon.png" alt="dashboard " width="62" height="62" />
+        <img @onclick="()=> account()" class="icon-hover" src="/img/Account.png" alt="Account " width="62" height="62" />
   
     </div>
 
@@ -161,9 +162,9 @@
     {
         <SearchPage />
     }
-    else if (ShowDashboard)
+    else if (Account)
     {
-        <AddProfile />
+        <Account />
     }
   
 
@@ -187,7 +188,7 @@
     private bool ShowCompleted = false;
     private bool ShowNote = false;
     private bool ShowSearh = false;
-    private bool ShowDashboard = false;
+    private bool Account = false;
 
 
 
@@ -209,7 +210,7 @@
         ShowCompleted = false;
         ShowNote = false;
         ShowSearh = false;
-        ShowDashboard = false;
+        Account = false;
         pageState.Reset();
 
     }
@@ -222,7 +223,7 @@
     private void completed() { ResetPages(); ShowCompleted = true; }
     private void note() { ResetPages(); ShowNote = true; }
     private void search() { ResetPages(); ShowSearh = true; }
-    private void dashboard() { ResetPages(); ShowDashboard = true; }
+    private void account() { ResetPages(); Account = true; }
  
     protected override void OnInitialized()
     {

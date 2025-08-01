@@ -31,30 +31,30 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
             return await CreateTokenResponse(user);
         }
 
-        public async Task<TaskProperties?> RegisterAsync(UserDto request)
+        public async Task<User?> RegisterAsync(UserDto request)
         {
-            if (await context.taskProperties.AnyAsync(u => u.Username == request.UserName))
+            if (await context.user.AnyAsync(u => u.Username == request.UserName))
             {
                 return null;
             }
-            var user = new TaskProperties();
-            var hashPassword = new PasswordHasher<TaskProperties>()
+            var user = new User();
+            var hashPassword = new PasswordHasher<User>()
                  .HashPassword(user, request.Password);
             user.Username = request.UserName;
             user.Password = hashPassword;
-            context.taskProperties.Add(user);
+            context.user.Add(user);
             await context.SaveChangesAsync();
             return user;
 
         }
         public async Task<TokenResponseDto?> HandleLogin(UserDto request)
         {
-            var user = await context.taskProperties.FirstOrDefaultAsync(u => u.Username == request.UserName);
+            var user = await context.user.FirstOrDefaultAsync(u => u.Username == request.UserName);
             if (user is null)
             {
                 return null;
             }
-            if (new PasswordHasher<TaskProperties>().VerifyHashedPassword(user, user.Password, request.Password) == PasswordVerificationResult.Failed)
+            if (new PasswordHasher<User>().VerifyHashedPassword(user, user.Password, request.Password) == PasswordVerificationResult.Failed)
             {
                 return null;
             }
@@ -62,7 +62,7 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
         }
 
         //1
-        private string CreateToken(TaskProperties user)
+        private string CreateToken(User user)
         {
             var claims = new List<Claim>
             {
@@ -94,7 +94,7 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
             return Convert.ToBase64String(RandomNumber);
         }
         //3
-        public async Task<string> GenerateAndSaveRefreshToken(TaskProperties user)
+        public async Task<string> GenerateAndSaveRefreshToken(User user)
         {
             var RefreshToken = GenerateRefreshToken();
             user.RefreshToken = RefreshToken;
@@ -103,9 +103,9 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
             return RefreshToken;
         }
         //4
-        public async Task<TaskProperties?> ValidateRefreshToken( Guid UserId, string RefreshToken)
+        public async Task<User?> ValidateRefreshToken( Guid UserId, string RefreshToken)
         {
-            var user = await context.taskProperties.FindAsync(UserId);
+            var user = await context.user.FindAsync(UserId);
             if(user is null || user.RefreshToken != RefreshToken || user.ExpiredRefreshToken <= DateTime.UtcNow)
             {
                 return null;
@@ -113,7 +113,7 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
             return user;
         }     
         //5
-       public async Task<TokenResponseDto> CreateTokenResponse(TaskProperties user)
+       public async Task<TokenResponseDto> CreateTokenResponse(User user)
         {
             return new TokenResponseDto
             {
@@ -124,7 +124,7 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
         }
         public async Task<bool> LogoutAsync(Guid id)
         {
-            var user = await context.taskProperties.FindAsync(id);
+            var user = await context.user.FindAsync(id);
             if(user is null)
             {
                 return false;
