@@ -1,72 +1,201 @@
-﻿@using PTMPersonalTaskManager.Client.Services
+﻿@page "/Login"
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@using PTMPersonalTaskManager.Client.Services
+@using PTMPersonalTaskManager.Domain.DTOs
+@using PTMPersonalTaskManager.Infrastructure.Services
+@using System.Security.Claims
 @inject PageState pageState
 @rendermode InteractiveServer
 @attribute [StreamRendering]
+@inject AuthApiServices authApiServices
+@inject ProtectedLocalStorage localStorage
+@inject NavigationManager navigation
+@inject AuthStateProvider authstateProvider
 
-<div class="relative px-4 pt-4 flex flex-col items-center gap-3">
+<CascadingAuthenticationState>
+    <AuthorizeView>
+        <Authorized>
+            <div class="relative flex items-center justify-center flex-col gap-2 mt-10">
+                <h1 class="text-2xl sm:text-3xl font-bold bg-gradient-to-t from-cyan-600 to-sky-900 bg-clip-text text-transparent border-1 border gap-1">You’re About to Sign Out</h1>
+                <div class="chat chat-start mt-5 pt-5">
+                    <div class="chat-image avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS chat bubble component"
+                                 src="/img/liama2.png" />
+                        </div>
+                    </div>
 
-    <!--image-->
-    <div class="w-20 h-20 rounded-full overflow-hidden ">
-        <img class="w-full h-full object-cover" src="/img/profile-icon.png" />
-    </div>
-    <h1 class="text-lg sm:text-2xl font-bold bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">Login Account</h1>
+                    <div class="chat-bubble bg-sky-100 text-cyan-800 text-md w-[100%]">We hope to see you again soon!</div>
+
+                </div>
+                <h1 class="text-lg sm:text-lg font-bold bg-gradient-to-t from-cyan-800 to-sky-800 bg-clip-text text-transparent">Logout Account</h1>
+                <div class="flex flex-row">
+                    <div class="w-20 h-20 rounded-full overflow-hidden pb-8">
+
+                        <img class="w-full h-full object-cover" src="/img/logout.png" />
+                    </div>
+
+                <div class="mt-2">
+                        <button @onclick="()=> HandleLogout()" class="btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">Logout</button>
+                </div>
+              </div>
+                <div class=" ">
+                   
+                </div>
+            </div>
+            <!--   <div class="relative px-4 pt-4 flex flex-col items-center justify-center gap-3">
+                   <div class="w-20 h-20 rounded-full overflow-hidden mt-10 pt-6">
+
+                       <img class="w-full h-full object-cover" src="/img/logout.png" />
+                   </div>
+                   <h1 class="text-lg sm:text-2xl font-bold bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">Login Account</h1>
+                   <button @onclick="()=> HandleLogout()" class="btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">Logout</button>
+               </div>-->
+        </Authorized>
+        <NotAuthorized>
+            <EditForm Model="@User" OnValidSubmit="@HandleLogin" FormName="Logins" Context="formContext">
+                <div class="relative px-4 pt-4 flex flex-col items-center gap-3">
+
+                    <!--image-->
+                    <div class="w-20 h-20 rounded-full overflow-hidden ">
+                        <img class="w-full h-full object-cover" src="/img/profile-icon.png" />
+                    </div>
+                    <h1 class="text-lg sm:text-2xl font-bold bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent">Login Account</h1>
 
 
 
 
 
-    <!--fullname-->
-    <label class="input validator max-w-sm w-full h-8 rounded-lg text-sky-800 focus:outline-none " style="border:1px solid rgba(0,0,0,0.2)">
-        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <g stroke-linejoin="round"
-            stroke-linecap="round"
-            stroke-width="2.5"
-            fill="none"
-            stroke="currentColor">
-                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-            </g>
-        </svg>
-        <input type="text"
-        required
-        placeholder="Username"
-        pattern="[A-Za-z][A-Za-z0-9\-]*"
-        minlength="3"
-        maxlength="30"
-        title="Only letters, numbers or dash" />
-    </label>
-    <!--Number-->
-    <label class="input validator h-8 max-w-sm w-full h-8 rounded-lg text-sky-800 focus:outline-none " style="border:1px solid rgba(0,0,0,0.2)">
-        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <g stroke-linejoin="round"
-            stroke-linecap="round"
-            stroke-width="2.5"
-            fill="none"
-            stroke="currentColor">
-                <path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"></path>
-                <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
-            </g>
-        </svg>
-        <input type="password"
-        required
-        placeholder="Password"
-        minlength="8"
-        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-        title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
-    </label>
-    <p class="validator-hint hidden">
-        Must be more than 8 characters, including
-        <br />At least one number <br />At least one lowercase letter <br />At least one uppercase letter
-    </p>
+                    <!--fullname-->
+                    <label class="input validator max-w-sm w-full h-8 rounded-lg text-sky-800 focus:outline-none " style="border:1px solid rgba(0,0,0,0.2)">
+                        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g stroke-linejoin="round"
+                               stroke-linecap="round"
+                               stroke-width="2.5"
+                               fill="none"
+                               stroke="currentColor">
+                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </g>
+                        </svg>
+                        <input type="text"
+                               required
+                               @bind="User.UserName"
+                               placeholder="Username">
+                    </label>
+                    <!--Number-->
+                    <label class="input validator h-8 max-w-sm w-full h-8 rounded-lg text-sky-800 focus:outline-none " style="border:1px solid rgba(0,0,0,0.2)">
+                        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g stroke-linejoin="round"
+                               stroke-linecap="round"
+                               stroke-width="2.5"
+                               fill="none"
+                               stroke="currentColor">
+                                <path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"></path>
+                                <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                            </g>
+                        </svg>
+                        <input type="password"
+                               required
+                               @bind="User.Password"
+                               placeholder="Password"
+                               minlength="8" />
 
-    <button type="submit" class="btn-wide btn  bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">Login</button>
-    <h5 class="bg-gradient-to-t from-cyan-700 to-sky-800 bg-clip-text text-transparent">Dont have an Account? <span @onclick="()=> HideLogin()" class="cursor-pointer bg-gradient-to-t from-cyan-800 to-sky-800 bg-clip-text text-transparent text-md">Register</span></h5>
-</div>
+
+                    </label>
+
+
+                    <button type="submit" class="btn-wide btn  bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">Login</button>
+                    <h5 class="bg-gradient-to-t from-cyan-700 to-sky-800 bg-clip-text text-transparent">Dont have an Account? <span @onclick="()=> HideLogin()" class="cursor-pointer bg-gradient-to-t from-cyan-800 to-sky-800 bg-clip-text text-transparent text-md">Register</span></h5>
+                    </div>
+            </EditForm>
+        </NotAuthorized>
+    </AuthorizeView>
+</CascadingAuthenticationState>
 
 
 @code {
 
+
     private bool hidelogin => pageState.Login;
+    private bool HasRendered = false;
+    private UserDto User = new();
+    private string? Error;
+    private IEnumerable<Claim> claims = [];
+
+    protected override async Task OnInitializedAsync()
+    {
+        var state = await authstateProvider.GetAuthenticationStateAsync();
+        claims = state.User.Claims;
+    }
+
+
+    private async Task HandleLogin()
+    {
+        Error = null;
+
+        if (string.IsNullOrEmpty(User.UserName) || string.IsNullOrEmpty(User.Password))
+        {
+            Error = "Fill up the Form";
+            return;
+        }
+        try
+        {
+            var result = await authApiServices.LoginAsync(User);
+            if (result is null)
+            {
+                Error = "Invalid Username or Password";
+                return;
+            }
+            await localStorage.SetAsync("AccessToken", result.AccessToken!);
+            await localStorage.SetAsync("RefreshToken", result.RefreshToken!);
+
+            await Task.Delay(100);
+            authstateProvider.NotifyChanges();
+            await Task.Delay(500);
+            navigation.NavigateTo("/", forceLoad: true);
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error" + ex.Message);
+        }
+
+
+    }
+
+
+    protected override async Task OnAfterRenderAsync(bool render)
+    {
+
+        if (render && !HasRendered)
+        {
+            HasRendered = true;
+            try
+            {
+                var jwt = await localStorage.GetAsync<string>("AccessToken");
+                var results = jwt.Success ? jwt.Value : null;
+                if(results is not null)
+                {
+                    Console.WriteLine("AccessToken" + results);
+                }
+            }catch(Exception ex)
+            {
+                Console.WriteLine("Error" +  ex.Message);
+            }
+            StateHasChanged();
+        }
+
+    }
+
+    private async Task HandleLogout()
+    {
+        await authstateProvider.LogoutAsync();
+        StateHasChanged();
+        navigation.NavigateTo("/Login");
+    }
+
 
     private void Reset()
     {

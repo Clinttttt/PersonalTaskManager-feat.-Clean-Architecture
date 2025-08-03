@@ -22,14 +22,14 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
 
         public async Task<TokenResponseDto?> LoginAsync (UserDto user)
         {
-            var response = await _http.PostAsJsonAsync("api/Auth/Login​",user);
+            var response = await _http.PostAsJsonAsync("api/Auth/Login", user);
             if (!response.IsSuccessStatusCode)
             {
                 return null;
             }
             return await response.Content.ReadFromJsonAsync<TokenResponseDto>();
         }
-        public async Task<User?> RegisterAsync (UserDto user)
+        public async Task<User?> RegisterAsync(UserDto user)
         {
             var response = await _http.PostAsJsonAsync("api/Auth/Register", user);
             if (!response.IsSuccessStatusCode)

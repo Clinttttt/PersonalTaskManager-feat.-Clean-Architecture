@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using PTMPersonalTaskManager.Client.Components;
 using PTMPersonalTaskManager.Client.Services;
 using PTMPersonalTaskManager.Infrastructure;
@@ -8,12 +10,27 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddScoped<PageState>();
 
+builder.Services.AddHttpClient();
+builder.Services.AddScoped<AuthStateProvider>();
+builder.Services.AddScoped<AuthenticationStateProvider, AuthStateProvider>();
+builder.Services.AddAuthorizationCore();
+builder.Services.AddScoped<ProtectedLocalStorage>();
 
+builder.Services.AddHttpClient("WebAPI", client =>
+{
+    client.BaseAddress = new Uri("https://localhost:7003");
+});
 builder.Services.AddHttpClient<AuthApiServices>(client =>
-  client.BaseAddress = new Uri("https://localhost:7003"));
+{
+    client.BaseAddress = new Uri("https://localhost:7003");
+});
+
 
 builder.Services.AddHttpClient<TaskManagerApiServices>(client =>
-client.BaseAddress = new Uri("https://localhost:7003"));
+{
+client.BaseAddress = new Uri("https://localhost:7003");
+});
+
 
 
 

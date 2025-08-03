@@ -46,8 +46,8 @@ namespace PTMPersonalTaskManager.Infrastructure
              NameClaimType = ClaimTypes.Name
          };
      });
-            services.AddScoped<AuthApiServices>();
-            services.AddScoped<TaskManagerApiServices>();
+         
+            
 
 
 
