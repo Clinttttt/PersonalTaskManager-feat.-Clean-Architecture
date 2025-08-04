@@ -1,8 +1,11 @@
 ﻿@using PTMPersonalTaskManager.Client.Services
+@using PTMPersonalTaskManager.Domain.DTOs.DetailsDto
+@using PTMPersonalTaskManager.Domain.Entities
+@using PTMPersonalTaskManager.Infrastructure.Services
 @inject PageState pageState
 @rendermode InteractiveServer
 @attribute [StreamRendering]
-
+@inject TaskApiServices taskApiServices
 
 
 <div class="top-50 xs:top-40 93 md:h-89 absolute left-1/2 border-sky-300  border bg-cyan-100 custom-css  top-40 -translate-x-[50%] sm:-translate-x-[50%] w-[100%] md:w-[50%]">
@@ -31,40 +34,92 @@
 
 
 
-        <!--Modl-->
-        <dialog id="my_modal_5" class="  modal modal-bottom sm:modal-middle ">
-            <div class="modal-box relative bg-gradient-to-t from-cyan-100 to-sky-100">
-                <input type="text" class="border-0  focus:outline-none text-sky-800 w-[30%]" placeholder="Title here!" style="border-bottom: solid 1px rgba(0, 177, 191)" />
-                <div class="my-6 flex flex-row gap-3 ">
-                    <textarea class="w-[71%] xs:w-[75%] text-sky-900 textarea h-34 focus:ring-0 focus:outline-none border-0 rounded-sm resize-none" placeholder="Whats on your mind?" style="border: solid 1px rgba(0, 177, 191)"></textarea>
+        <!--Modl Add T-->
+        <EditForm Model="@createTask" OnValidSubmit="@CreateTaskHandle" FormName="CreatingTask">
+            <dialog id="my_modal_5" class="  modal modal-bottom sm:modal-middle ">
+                <div class="modal-box relative bg-gradient-to-t from-cyan-100 to-sky-100">
+                    <input @bind="createTask.Title" type="text" class="border-0  focus:outline-none text-sky-800 w-[30%]" placeholder="Title here!" style="border-bottom: solid 1px rgba(0, 177, 191)" />
+                    <div class="my-6 flex flex-row gap-3 ">
+                        <textarea @bind="createTask.Description" class="w-[71%] xs:w-[75%] text-sky-900 textarea h-34 focus:ring-0 focus:outline-none border-0 rounded-sm resize-none" placeholder="Whats on your mind?" style="border: solid 1px rgba(0, 177, 191)"></textarea>
 
-                    <form class="right-3 xs:right-4 top-6 filter flex flex-col gap-2 absolute ">
-                        <input class="btn btn-square bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md" type="reset" value="×" />
-                        <input class="btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md" type="radio" name="frameworks" aria-label="Chill Notes" />
-                        <input class="btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md" type="radio" name="frameworks" aria-label="Focus Task" />
-                        <input class="btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md" type="radio" name="frameworks" aria-label="Beast Mode" />
-                       
-                    </form>
-                 
+                        <div class="right-3 xs:right-4 top-6 filter flex flex-col gap-2 absolute ">
+
+                            <input class="btn btn-square bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md" type="reset" />
+                            <input @onclick="()=> createTask.Priority = TaskPriority.Low" class="btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md" type="radio" name="frameworks" aria-label="Chill Notes" />
+                            <input @onclick="()=> createTask.Priority = TaskPriority.Medium" class="btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md" type="radio" name="frameworks" aria-label="Focus Task" />
+                            <input @onclick="()=> createTask.Priority = TaskPriority.Hard" class="btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md" type="radio" name="frameworks" aria-label="Beast Mode" />
+
+                        </div>
+
+                    </div>
+                    <div class="modal-action relative ">
+
+                        <form method="dialog" class="flex gap-2 absolute right-5" >
+
+                            <input @bind="createTask.DueDate" type="datetime-local" class="input w-[55%] text-sky-800 bg-gradient-to-t from-teal-100 to-cyan-100 border-cyan-700 rounded-sm" style="pointer-events: auto;" />
+
+                            <button class=" btn text-sky-800 bg-gradient-to-t from-teal-100 to-cyan-100 border-cyan-700 rounded-sm" style="pointer-events: auto;">Close</button>
+
+                        </form>
+                        <button type="submit" class="cursor-pointer btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md" style="position: relative; z-index: 10;">Save</button>
+                    </div>
                 </div>
-                <div class="modal-action ">
-                    <form method="dialog" class="flex flex gap-2">
-                     
-                        <input type="datetime-local" class="input w-[55%] text-sky-800 bg-gradient-to-t from-teal-100 to-cyan-100 border-cyan-700 rounded-sm" />
-                        <button class="btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">Save</button>
-                        <button class="btn text-sky-800 bg-gradient-to-t from-teal-100 to-cyan-100 border-cyan-700 rounded-sm">Close</button>
-                    </form>
-                </div>
-            </div>
-        </dialog>
+            </dialog>
+        </EditForm>
 
-
+        @if (!string.IsNullOrEmpty(Error))
+        {
+            <h1 class="text-red-600">@Error</h1>
+        }
     </div>
 </div>
 
 
 
 @code {
+    private CreateTaskDto createTask = new();
+    private string? Error;
+
+    private IEnumerable<DetailsDto>? display;
+
+    private async Task HandleDisplayCard()
+    {
+        display = await taskApiServices.AllTaskAsync();
+
+    }
+
+
+    private async Task CreateTaskHandle()
+    {
+        Error = null;
+        if(string.IsNullOrEmpty(createTask.Title) || string.IsNullOrEmpty(createTask.Description))
+        {
+            Error = "Fill up First";
+        }
+        try
+        {
+            var Create = await taskApiServices.CreateTaskAsync(createTask);
+            if(Create is null)
+            {
+                Error = "Something Went Wrong";
+                return;
+            }
+         
+            createTask = new();
+            await HandleDisplayCard();
+            StateHasChanged();
+        }
+        catch(Exception ex)
+        {
+            System.Console.WriteLine("Error" + ex.Message);
+        }
+
+    }
+
+
+
+
+    
     private bool ShowNoteCard => pageState.HideCard;
     private bool displaynotes => pageState.DisplayNotes;
     private void ShowByDefault()

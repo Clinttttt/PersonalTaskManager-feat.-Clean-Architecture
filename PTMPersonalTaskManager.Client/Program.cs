@@ -26,7 +26,7 @@ builder.Services.AddHttpClient<AuthApiServices>(client =>
 });
 
 
-builder.Services.AddHttpClient<TaskManagerApiServices>(client =>
+builder.Services.AddHttpClient<TaskApiServices>(client =>
 {
 client.BaseAddress = new Uri("https://localhost:7003");
 });
