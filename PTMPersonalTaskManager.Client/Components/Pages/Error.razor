@@ -1,4 +1,4 @@
-﻿@page "/Error"
+﻿@*@page "/Error"
 @using System.Diagnostics
 
 <PageTitle>Error</PageTitle>
@@ -34,3 +34,4 @@
     protected override void OnInitialized() =>
         RequestId = Activity.Current?.Id ?? HttpContext?.TraceIdentifier;
 }
+*@

@@ -1,14 +1,17 @@
-﻿using PTMPersonalTaskManager.Client.Components.Pages.Menupage.Note;
+﻿using Microsoft.Identity.Client;
+using PTMPersonalTaskManager.Client.Components.Pages.Menupage.Note;
+using PTMPersonalTaskManager.Domain.DTOs.DetailsDto;
 
 namespace PTMPersonalTaskManager.Client.Services
 {
     public class PageState
     {
         public bool ShowProfile { get; private set; }
-        public bool HideCard { get; private set; }
+        public bool HideCard { get; private set; } 
         public bool DisplayNotes { get; private set; }
         public bool Login { get; private set; }
         public bool ShowRegister { get; private set; }
+       
 
         public event Action? OnChange;
 

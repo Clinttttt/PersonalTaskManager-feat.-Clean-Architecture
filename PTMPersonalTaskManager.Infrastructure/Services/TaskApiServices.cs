@@ -1,4 +1,5 @@
 ﻿using Azure.Core;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
 using Microsoft.Identity.Client;
 using PTMPersonalTaskManager.Domain.DTOs.DetailsDto;
@@ -41,20 +42,49 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
             }
             return await initialize.Content.ReadFromJsonAsync<Taskproperties>();
         }
-        public async Task<Taskproperties?> GetDataAsync(Guid Id)
+        //display
+        public async Task<DetailsDto?> GetDataAsync(Guid Id)
         {
             await SetAuthHeaderAsync();
-            var initialize = await _http.PostAsJsonAsync($"api/TaskManager/GetData/{Id}", Id);
-            if (!initialize.IsSuccessStatusCode)
+            try
+            {
+                return await _http.GetFromJsonAsync<DetailsDto>($"api/TaskManager/GetData/{Id}");
+            }
+            catch
             {
                 return null;
             }
-            return await initialize.Content.ReadFromJsonAsync<Taskproperties>();
+          
+        
         }
+        /*     public async Task<DetailsDto?> GetDataAsync(Guid Id)
+        {
+            await SetAuthHeaderAsync();
+            try
+            {
+              return await _http.GetFromJsonAsync<DetailsDto>($"api/TaskManager/GetData/{Id}");
+             
+            
+            }
+            catch
+            {
+                return null;
+            }
+        
+           
+        }*/
+
         public async Task<IEnumerable<DetailsDto>?> AllTaskAsync()
         {
             await SetAuthHeaderAsync();
-            return await _http.GetFromJsonAsync<IEnumerable<DetailsDto>>("api/TaskManager/ListTask");
+            try
+            {
+                return await _http.GetFromJsonAsync<IEnumerable<DetailsDto>>("api/TaskManager/ListTask");
+            }
+            catch
+            {
+                return null;
+            }
         }
         public async Task<Taskproperties?> DeleteTaskAsync( Guid Id)
         {

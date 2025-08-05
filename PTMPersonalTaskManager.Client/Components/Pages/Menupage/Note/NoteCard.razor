@@ -1,8 +1,11 @@
-﻿@using PTMPersonalTaskManager.Client.Services
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using PTMPersonalTaskManager.Client.Services
 @using PTMPersonalTaskManager.Domain.DTOs.DetailsDto
 @using PTMPersonalTaskManager.Infrastructure.Services
 @inject PageState pageState
 @inject TaskApiServices taskApiServices
+@inject TaskStateService taskStateService
+
 <div class="h-[565px] md:h-[275px]  absolute top-20 pb-4 flex gap-4 flex-row flex-wrap w-full  justify-center overflow-auto ">
     @if(display is null)
     {
@@ -10,22 +13,34 @@
     }
     else
     {
-        @foreach (var card in display)
-        {
-            <div class="  card  bg-gradient-to-b from-sky-400 h-[70%] to-cyan-700 text-primary-content w-[45%]">
-                <div class="card-body">
-                    <div class="h-[295px] md:h-[100px] overflow-auto relative">
-                        <h2 class="card-title text-sky-200 text-lg ">@card.Title</h2>
-                        <p class="text-sky-200 ">@card.Description</p>
-                    </div>
-                    <div class="card-actions justify-end absolute bottom-4 right-5">
-                        <button @onclick="()=> Hides()" class="text-cyan-800 btn rounded-sm bg-gradient-to-b from-cyan-200 to-teal-200">View Tasks</button>
-                    </div>
-                </div>
-            </div>
+        <CascadingAuthenticationState>
+            <AuthorizeView>
+                <Authorized>
+                    @foreach (var card in display)
+                    {
 
 
-        }
+                        <div class="  card  bg-gradient-to-b from-sky-400 h-[70%] to-cyan-700 text-primary-content w-[45%]">
+                            <div class="card-body">
+                                <div class="h-[295px] md:h-[100px] overflow-auto relative">
+                                    <h2 class="card-title text-sky-200 text-lg ">@card.Title</h2>
+                                    <p class="text-sky-200 ">@card.Description</p>
+                                </div>
+                                <div class="card-actions justify-end absolute bottom-4 right-5">
+                                    <button @onclick="()=> TaskView(card)" class="text-cyan-800 btn rounded-sm bg-gradient-to-b from-cyan-200 to-teal-200">View Tasks</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    }
+                </Authorized>
+                <NotAuthorized>
+                    <h1>Nothing to display</h1>
+                </NotAuthorized>
+            </AuthorizeView>
+        </CascadingAuthenticationState>
+
     }
 
 
@@ -39,36 +54,27 @@
 
 
 @code {
-    private IEnumerable<DetailsDto>? display;
 
-    protected override async Task OnInitializedAsync()
+    private List<DetailsDto>? display => taskStateService.Task;
+
+    [Parameter]
+    public EventCallback<DetailsDto> OnviewTask { get;set;}
+
+    private void TaskView(DetailsDto task)
     {
-        await HandleDisplayCard();
-        StateHasChanged();
-    } 
-    private async Task HandleDisplayCard()
-    {
-        display = await taskApiServices.AllTaskAsync();
-        
+        OnviewTask.InvokeAsync(task);
     }
 
-
-
-    private bool hidecard => pageState.HideCard;
-
-    private void ShowByDefault()
-    {
-        pageState.Reset();
-    }
-    private void Hides() { ShowByDefault(); pageState.Hide(); }
     protected override void OnInitialized()
     {
 
-        pageState.OnChange += StateHasChanged;
+      
+        taskStateService.Onchange += Refresh;
     }
-    public void Dispose()
+   
+    //displaying Card realtime
+    private async Task Refresh()
     {
-        pageState.OnChange -= StateHasChanged;
+        await InvokeAsync(StateHasChanged);
     }
-
 }

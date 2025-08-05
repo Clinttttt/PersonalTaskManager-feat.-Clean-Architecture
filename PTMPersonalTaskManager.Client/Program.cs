@@ -31,6 +31,7 @@ builder.Services.AddHttpClient<TaskApiServices>(client =>
 client.BaseAddress = new Uri("https://localhost:7003");
 });
 
+builder.Services.AddSingleton<TaskStateService>();
 
 
 

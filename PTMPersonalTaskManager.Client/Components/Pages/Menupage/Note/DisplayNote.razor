@@ -1,37 +1,62 @@
-﻿<div class="h-[695px] sm:h-[565px] relative h-[565px] md:h-[275px] absolute top-20 pb-4 flex gap-4 flex-row flex-wrap w-full   overflow-auto ">
-  
-    <kbd class="kbd right-52 top-1 absolute text-cyan-800 bg-gradient-to-t from-sky-100 to-cyan-100 rounded-sm">BEAST MODE</kbd>
-    <p class="right-5 top-1 absolute bg-gradient-to-t from-teal-900 to-sky-900 bg-clip-text text-transparent">@(new DateTime(2025, 7, 31, 10, 0, 0).ToString("MMMM dd, yyyy – hh:mm tt"))</p>
-    <button type="submit" class=" btn right-24 top-10 absolute bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">Modify</button>
-    <input type="checkbox" aria-label="Ended" class=" btn right-5 top-10 absolute bg-gradient-to-t from-green-400 to-emerald-500 text-cyan-100 rounded-md" style="border-bottom: solid 1px rgba(0, 177, 191)"/>
-    <h1 class="inline-block max-w-[90%] mt-27 ml-7 text-lg break-words italic font-semibold bg-gradient-to-t from-cyan-900 to-sky-900 bg-clip-text text-transparent">
-        The Sin That Knows My Name
-    </h1>
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using PTMPersonalTaskManager.Domain.DTOs.DetailsDto
+@using PTMPersonalTaskManager.Infrastructure.Services
+@inject TaskApiServices taskApiServices
+@rendermode InteractiveServer
+@attribute [StreamRendering]
 
-   <div class="flex justify-center ">
-        <p class=" mb-55 sm:mt-5 text-justify mt-5 overflow-auto  h-[440px] w-[95%] font-semilight bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent indent-6
-">
-            He never had to look for it. The sin always found him.
 
-            It waited patiently in the silence between prayers, in the pause before sleep, in the breath before he said no—but meant yes.
+    <div class="h-[695px] sm:h-[565px] relative h-[565px] md:h-[275px] absolute top-20 pb-4 flex gap-4 flex-row flex-wrap w-full   overflow-auto ">
+   <CascadingAuthenticationState>
+      <AuthorizeView>
+          <Authorized>
+                @if (Display is not null)
+                {
+                    <kbd class="kbd right-52 top-1 absolute text-cyan-800 bg-gradient-to-t from-sky-100 to-cyan-100 rounded-sm">@Display.Priority</kbd>
+                    <p class="right-5 top-1 absolute bg-gradient-to-t from-teal-900 to-sky-900 bg-clip-text text-transparent"> @Display.DueDate</p>
+                    <button type="submit" class=" btn right-24 top-10 absolute bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">Modify</button>
+                    <input type="checkbox" aria-label="Ended" class=" btn right-5 top-10 absolute bg-gradient-to-t from-green-400 to-emerald-500 text-cyan-100 rounded-md" style="border-bottom: solid 1px rgba(0, 177, 191)" />
 
-            He knew its shape. It didn’t wear horns or carry smoke. It was familiar. Gentle. Sometimes it even looked like comfort.
+                    <h1 class="inline-block max-w-[90%] mt-27 ml-7 text-lg break-words italic font-semibold bg-gradient-to-t from-cyan-900 to-sky-900 bg-clip-text text-transparent">@Display.Title </h1>
 
-            Each time he turned away from it, he found it already ahead of him, smiling, as if to say: “We both know you’ll come back.”
 
-            And he did.
+                    <div class="flex  justify-center h-[440px] w-[95%] ml-3 overflow-auto">
+                        <p class="text-justify font-semilight bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent indent-6">
+                            @Display.Description
+                        </p>
+                    </div>
 
-            He would fall to his knees and curse his weakness. Swear it was the last time. Yet when the moment returned, he would greet it like an old friend.
+                }
+                else
+                {
 
-            “What power do you hold over me?” he asked once in the dark.
+                    <h1 class="text-ref-500">@Error</h1>
 
-            The sin whispered, “None. You keep calling me.”
-
-            He never forgot that voice. It was soft. And it knew his name.
-        </p>
-   </div>
+                }
+            </Authorized>
+            <NotAuthorized>
+                <h1>Not Login</h1>
+            </NotAuthorized>
+        </AuthorizeView>
+    </CascadingAuthenticationState>
 </div>
 
-@code {
 
+@code {
+    [Parameter]
+    public DetailsDto Item { get; set; } = default!;
+
+
+    
+    public DetailsDto? Display;
+    public string? Error;
+    protected override async Task OnParametersSetAsync()
+    {
+        Display = await taskApiServices.GetDataAsync(Item.Id);
+        if(Display is null)
+        {
+            Error = "Nothing to Displays";
+         
+        }
+    }
 }
