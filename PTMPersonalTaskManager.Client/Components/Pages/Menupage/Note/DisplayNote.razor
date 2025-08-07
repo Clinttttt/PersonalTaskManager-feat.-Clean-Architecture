@@ -1,29 +1,53 @@
 ﻿@using Microsoft.AspNetCore.Components.Authorization
+@using PTMPersonalTaskManager.Client.Services
 @using PTMPersonalTaskManager.Domain.DTOs.DetailsDto
 @using PTMPersonalTaskManager.Infrastructure.Services
 @inject TaskApiServices taskApiServices
 @rendermode InteractiveServer
 @attribute [StreamRendering]
+@inject PageState pageState
 
+<div class=" h-[565px] relative h-[565px] md:h-[275px] absolute top-20 pb-4 flex gap-4 flex-row flex-wrap w-full   overflow-auto ">
+    <CascadingAuthenticationState>
+        <AuthorizeView>
+            <Authorized>
 
-    <div class="h-[695px] sm:h-[565px] relative h-[565px] md:h-[275px] absolute top-20 pb-4 flex gap-4 flex-row flex-wrap w-full   overflow-auto ">
-   <CascadingAuthenticationState>
-      <AuthorizeView>
-          <Authorized>
                 @if (Display is not null)
                 {
+                    <button @onclick="()=>  Back()" class="btn ">back</button>
                     <kbd class="kbd right-52 top-1 absolute text-cyan-800 bg-gradient-to-t from-sky-100 to-cyan-100 rounded-sm">@Display.Priority</kbd>
-                    <p class="right-5 top-1 absolute bg-gradient-to-t from-teal-900 to-sky-900 bg-clip-text text-transparent"> @Display.DueDate</p>
-                    <button type="submit" class=" btn right-24 top-10 absolute bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">Modify</button>
+                    <p class="right-5 top-1 absolute bg-gradient-to-t from-teal-900 to-sky-900 bg-clip-text text-transparent"> @Display.CreatedAtInPhilippines</p>
+                    <button @onclick="()=> ToggleEdit()"  class=" btn right-24 top-10 absolute bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">@(IsEdited ? "Save" : "Edit")</button>
                     <input type="checkbox" aria-label="Ended" class=" btn right-5 top-10 absolute bg-gradient-to-t from-green-400 to-emerald-500 text-cyan-100 rounded-md" style="border-bottom: solid 1px rgba(0, 177, 191)" />
+                    @if (IsEdited)
+                    {
+                        <input @bind="EditedTitle"
+                        class="block w-[90%] mt-27 ml-7 text-lg italic font-semibold text-cyan-900 border-none outline-none bg-transparent" />
 
-                    <h1 class="inline-block max-w-[90%] mt-27 ml-7 text-lg break-words italic font-semibold bg-gradient-to-t from-cyan-900 to-sky-900 bg-clip-text text-transparent">@Display.Title </h1>
+
+                    }
+                    else
+                    {
+                        <h1 class="inline-block max-w-[90%] mt-27 ml-7 text-lg break-words italic font-semibold bg-gradient-to-t from-cyan-900 to-sky-900 bg-clip-text text-transparent">@Display.Title </h1>
+                    }
 
 
-                    <div class="flex  justify-center h-[440px] w-[95%] ml-3 overflow-auto">
-                        <p class="text-justify font-semilight bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent indent-6">
-                            @Display.Description
-                        </p>
+
+                    <div class="flex  justify-center  w-[95%] ml-3">
+                        @if (IsEdited)
+                        {
+                            <textarea @bind="EditedDescription"
+                            class="w-full h-[440px] text-justify font-semilight bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent indent-6 resize-none overflow-auto border-none outline-none "
+                            >
+                            </textarea>
+
+                        }
+                        else
+                        {
+                            <p class="text-justify font-semilight bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent indent-6">
+                                @Display.Description
+                            </p>
+                        }
                     </div>
 
                 }
@@ -45,18 +69,90 @@
 @code {
     [Parameter]
     public DetailsDto Item { get; set; } = default!;
+    private string? EditedTitle { get; set; }
+    private string? EditedDescription { get; set; }
+    private bool IsEdited = false;
 
-
-    
     public DetailsDto? Display;
     public string? Error;
+    @implements IDisposable
+
+    public async Task Back()
+    {
+        await Task.Delay(50);
+        await pageState.SetNote(PageState.PageView.NoteCardDisplay);
+     
+    }
+
+
+
+    protected override void OnInitialized()
+    {
+        pageState.Onchanges += RefreshComponent;
+    }
+
+    private async Task RefreshComponent()
+    {
+        await InvokeAsync(StateHasChanged); 
+    }
+
+    public void Dispose()
+    {
+        pageState.Onchanges -= RefreshComponent;
+    }
+
+
+
+
+
+
+
     protected override async Task OnParametersSetAsync()
     {
         Display = await taskApiServices.GetDataAsync(Item.Id);
-        if(Display is null)
+        if (Display is null)
         {
             Error = "Nothing to Displays";
-         
+
+        }
+        if (Display is not null)
+        {
+            EditedTitle = Display.Title;
+            EditedDescription = Display.Description;
         }
     }
+    private async Task ToggleEdit()
+    {
+      
+        if (IsEdited)
+        {
+            if (Display is not null)
+            {
+                var EditDtos = new UpdateTaskDto
+                    {
+
+                        Id = Display.Id,
+                        Title = EditedTitle,
+                        Description = EditedDescription
+
+                    };
+                var result = await taskApiServices.UpdateTaskAsync(EditDtos);
+                if (result is not null)
+                {
+                    Display.Title = result.Title;
+                    Display.Description = result.Description;
+                }
+                else
+                {
+                    Console.WriteLine("Somethin Went Wrong");
+                }
+            }
+          
+        }
+          IsEdited = !IsEdited;
+        StateHasChanged();
+     
+
+    }
+
 }

@@ -6,7 +6,7 @@
 @inject TaskApiServices taskApiServices
 @inject TaskStateService taskStateService
 
-<div class="h-[565px] md:h-[275px]  absolute top-20 pb-4 flex gap-4 flex-row flex-wrap w-full  justify-center overflow-auto ">
+<div class="h-[580px] md:h-[275px]  absolute top-20 pb-4 flex gap-4 flex-row flex-wrap w-full  justify-center overflow-auto ">
     @if(display is null)
     {
         <h1>No Task</h1>
@@ -22,11 +22,11 @@
 
                         <div class="  card  bg-gradient-to-b from-sky-400 h-[70%] to-cyan-700 text-primary-content w-[45%]">
                             <div class="card-body">
-                                <div class="h-[295px] md:h-[100px] overflow-auto relative">
+                                <div class="h-[295px] md:h-[96px] overflow-auto relative">
                                     <h2 class="card-title text-sky-200 text-lg ">@card.Title</h2>
                                     <p class="text-sky-200 ">@card.Description</p>
                                 </div>
-                                <div class="card-actions justify-end absolute bottom-4 right-5">
+                                <div class="card-actions justify-end absolute bottom-3 right-5">
                                     <button @onclick="()=> TaskView(card)" class="text-cyan-800 btn rounded-sm bg-gradient-to-b from-cyan-200 to-teal-200">View Tasks</button>
                                 </div>
                             </div>
@@ -62,17 +62,19 @@
 
     private void TaskView(DetailsDto task)
     {
+       
+        
         OnviewTask.InvokeAsync(task);
+       
     }
 
     protected override void OnInitialized()
     {
 
-      
+       
         taskStateService.Onchange += Refresh;
     }
-   
-    //displaying Card realtime
+  
     private async Task Refresh()
     {
         await InvokeAsync(StateHasChanged);

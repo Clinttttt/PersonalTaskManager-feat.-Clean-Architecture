@@ -1,4 +1,4 @@
-﻿@using Mapster
+﻿  @using Mapster
 @using Microsoft.AspNetCore.Components.Authorization
 @using PTMPersonalTaskManager.Client.Services
 @using PTMPersonalTaskManager.Domain.DTOs.DetailsDto
@@ -10,18 +10,23 @@
 @inject TaskApiServices taskApiServices
 @inject TaskStateService taskStateService
 
+
+
+
+
+
 <CascadingAuthenticationState>
     <AuthorizeView>
         <Authorized>
-<div class="top-50 xs:top-40 93 md:h-89 absolute left-1/2 border-sky-300  border bg-cyan-100 custom-css  top-40 -translate-x-[50%] sm:-translate-x-[50%] w-[100%] md:w-[50%]">
-    <div class="relative ">
-        <div class=" absolute w-full rounded-t-md top-0 left-0 h-15 bg-gradient-to-b from-sky-300 to-cyan-300 "></div>
-        <h1 class=" text-2xl sm:text-3xl top-3 sm:top-2 left-3  font-bold absolute bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent ">Notes</h1>
-        <div class=" top-4  left-1/2 -translate-x-[50%]  absolute text-center  ">
-            <h2 class="mr-7 sm:text-center italic bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent underline">"Your task, Your story" </h2>
-        </div>
-        <button onclick="my_modal_5.showModal()" class=" text-sky-800 bg-gradient-to-t from-teal-100 to-cyan-100 absolute right-2 top-2 btn text-center rounded-sm">Add Tasks</button>
-        <div class="top-15 absolute w-full" style="border:solid 1px rgba(0,0,0,0.2)"></div>
+            <div class=" top-50  xs:top-40 overflow-auto max-h-screen h-screen md:h-89 absolute left-1/2 border-sky-300  border bg-cyan-100 custom-css  top-40 -translate-x-[50%] sm:-translate-x-[50%] w-[100%] md:w-[50%]">
+                <div class="relative ">
+                    <div class=" absolute w-full rounded-t-md top-0 left-0 h-15 bg-gradient-to-b from-sky-300 to-cyan-300 "></div>
+                    <h1 class=" text-2xl sm:text-3xl top-3 sm:top-2 left-3  font-bold absolute bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent ">Notes</h1>
+                    <div class=" top-4  left-1/2 -translate-x-[50%]  absolute text-center  ">
+                        <h2 class="mr-7 sm:text-center italic bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent underline">"Your task, Your story" </h2>
+                    </div>
+                    <button onclick="my_modal_5.showModal()" class=" text-sky-800 bg-gradient-to-t from-teal-100 to-cyan-100 absolute right-2 top-2 btn text-center rounded-sm">Add Tasks</button>
+                    <div class="top-15 absolute w-full" style="border:solid 1px rgba(0,0,0,0.2)"></div>
 
 
 
@@ -64,7 +69,7 @@
                                 </div>
                                 <div class="modal-action relative ">
 
-                                    <form method="dialog" class="flex gap-2 absolute right-5" >
+                                    <form method="dialog" class="flex gap-2 absolute right-5">
 
                                         <input @bind="createTask.DueDate" type="datetime-local" class="input w-[55%] text-sky-800 bg-gradient-to-t from-teal-100 to-cyan-100 border-cyan-700 rounded-sm" style="pointer-events: auto;" />
 
@@ -87,76 +92,111 @@
         </Authorized>
         <NotAuthorized>
             <!-- Open the modal using ID.showModal() method -->
-           
-        
+
+
         </NotAuthorized>
     </AuthorizeView>
 
 </CascadingAuthenticationState>
-@code {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@code {
     private CreateTaskDto createTask = new();
     private string? Error;
-
     private DetailsDto? TaskDisplay { get; set; }
     private IEnumerable<DetailsDto>? display;
 
+
+
+    private bool ShowNoteCard = true;
+    private bool displaynotes = false;
+    private void Hide()
+    {
+        ShowNoteCard = false;
+        displaynotes = true;
+        StateHasChanged();
+
+    }
     private void SelectedTask(DetailsDto task)
     {
         TaskDisplay = task;
-        pageState.Hide();
+        Hide();
     }
+
+
+
+
+
+
 
     private async Task CreateTaskHandle()
     {
         Error = null;
-        if(string.IsNullOrEmpty(createTask.Title) || string.IsNullOrEmpty(createTask.Description))
+
+        if (string.IsNullOrEmpty(createTask.Title) || string.IsNullOrEmpty(createTask.Description))
         {
             Error = "Fill up First";
         }
         try
         {
+
             var Create = await taskApiServices.CreateTaskAsync(createTask);
 
-            if(Create is null)
+
+            if (Create is null)
             {
                 Error = "Something Went Wrong";
                 return;
             }
 
-
-
+            var task = (await taskApiServices.AllTaskAsync())?.ToList() ?? new();
+            await taskStateService.CreateTask(task);
             createTask = new();
 
         }
 
-        catch(Exception ex)
+        catch (Exception ex)
         {
             System.Console.WriteLine("Error" + ex.Message);
         }
 
     }
 
-    private bool ShowNoteCard => pageState.HideCard;
-    private bool displaynotes => pageState.DisplayNotes;
-    private void ShowByDefault()
-    {
-        pageState.Reset();
-    }
 
     protected override void OnInitialized()
     {
-
+        taskStateService.Onchange += Refresh;
         pageState.OnChange += StateHasChanged;
+    }
+    public async Task Refresh()
+    {
+        await InvokeAsync(StateHasChanged);
     }
     public void Dispose()
     {
         pageState.OnChange -= StateHasChanged;
     }
+
+
     protected override async Task OnInitializedAsync()
     {
+
+
         var task = (await taskApiServices.AllTaskAsync())?.ToList() ?? new();
-  
         await taskStateService.CreateTask(task);
+
     }
 }

@@ -97,15 +97,15 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
             return await initialize.Content.ReadFromJsonAsync<Taskproperties>();
             
         }
-        public async Task<Taskproperties?> UpdateTaskAsync(UpdateTaskDto update)
+        public async Task<DetailsDto?> UpdateTaskAsync(UpdateTaskDto update)
         {
             await SetAuthHeaderAsync();
-            var initialize = await _http.PostAsJsonAsync("api/TaskManager/UpdateData", update);
+            var initialize = await _http.PatchAsJsonAsync("api/TaskManager/UpdateData", update);
             if (!initialize.IsSuccessStatusCode)
             {
                 return null;
             }
-            return await initialize.Content.ReadFromJsonAsync<Taskproperties>();
+            return await initialize.Content.ReadFromJsonAsync<DetailsDto>();
         
         }
     }

@@ -1,0 +1,93 @@
+﻿@*@using Microsoft.AspNetCore.Components.Authorization
+@using PTMPersonalTaskManager.Client.Components.Pages.Menupage
+@using PTMPersonalTaskManager.Client.Components.Pages.Menupage.Account
+@using PTMPersonalTaskManager.Client.Components.Pages.Menupage.Note
+@using PTMPersonalTaskManager.Client.Services
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+@inject NavigationManager navigation
+    @inject PageState pageState
+<div class="h-40 gap-1 flex flex-wrap   xs:h-30 flex flex-wrap items-center justify-center  w-149 md:h-30   rounded-b-lg mt-5 border bg-linear-to-t from-cyan-500 to-blue-500 text-white  " style="border: solid 1px rgba(0,0,0,0.2)">
+
+    <CascadingAuthenticationState>
+        <AuthorizeView>
+            <Authorized>
+                <img @onclick="()=> pageState.SetView(PageState.PageView.HomePage)" class="icon-hover " src="img/home-icon.png" alt="home icon" width="62" height="62" />
+                <img @onclick="()=> pageState.SetView(PageState.PageView.ProfilePage)" class=" hidden sm:block icon-hover" src="img/profile-icon.png" alt="Profile icon" width="62" height="62" />
+                <img @onclick="()=> pageState.SetView(PageState.PageView.CalendarPage)" class=" icon-hover " src="img/calendar-icon.png" alt="Calendar Icon" width="62" height="62" />
+                <img @onclick="()=> pageState.SetView(PageState.PageView.PriorityPage)" class="icon-hover" src="img/priority-task.png" alt="priority Task" width="62" height="62" />
+                <img @onclick="()=> pageState.SetView(PageState.PageView.CompletedPage)" class=" icon-hover" src="img/complete-icon.png" alt="complete Task" width="62" height="62" />
+                <img @onclick="()=> pageState.SetView(PageState.PageView.Note)" class="icon-hover" src="img/note-icon.png" alt="note" width="62" height="62" />
+                <img @onclick="()=> pageState.SetView(PageState.PageView.Card)" class=" icon-hover" src="img/card-icon.png" alt="card" width="62" height="62" />
+                <img @onclick="()=> pageState.SetView(PageState.PageView.SearchPage)" class="hidden sm:block icon-hover" src="img/search-icon.png" alt="search task " width="62" height="62" />
+                <img @onclick="()=> pageState.SetView(PageState.PageView.Account)" class="icon-hover" src="/img/Account.png" alt="Account " width="62" height="62" />
+            </Authorized>
+            <NotAuthorized>
+                <img onclick="my_modal_1.showModal()" class="icon-hover " src="img/home-icon.png" alt="home icon" width="62" height="62" />
+                <img onclick="my_modal_1.showModal()" class=" hidden sm:block icon-hover" src="img/profile-icon.png" alt="Profile icon" width="62" height="62" />
+                <img onclick="my_modal_1.showModal()" class=" icon-hover " src="img/calendar-icon.png" alt="Calendar Icon" width="62" height="62" />
+                <img onclick="my_modal_1.showModal()" class="icon-hover" src="img/priority-task.png" alt="priority Task" width="62" height="62" />
+                <img onclick="my_modal_1.showModal()" class="icon-hover" src="img/complete-icon.png" alt="complete Task" width="62" height="62" />
+                <img onclick="my_modal_1.showModal()" class="icon-hover" src="img/note-icon.png" alt="note" width="62" height="62" />
+                <img onclick="my_modal_1.showModal()" class=" icon-hover" src="img/card-icon.png" alt="card" width="62" height="62" />
+                <img onclick="my_modal_1.showModal()" class="hidden sm:block icon-hover" src="img/search-icon.png" alt="search task " width="62" height="62" />
+                <img @onclick="()=> pageState.SetView(PageState.PageView.Account)" class="icon-hover" src="/img/Account.png" alt="Account " width="62" height="62" />
+
+                <dialog id="my_modal_1" class="modal">
+                    <div class="modal-box items-center justify-center bg-sky-100">
+                        <div role="alert" class="alert alert-warning rounded-b-lg mt-5 border bg-linear-to-t from-cyan-500 to-blue-500 border-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                            <span class="font-semibold">Warning: &nbsp; Sign in to start organizing your tasks and stay on track!</span>
+                        </div>
+                        <div class="justify-center items-center flex flex-col">
+                            <p class="text-lg font-bold py-4  text-sky-700">Sign In to Access Your Tasks</p>
+
+
+                            <form method="dialog">
+                                <button @onclick="()=> pageState.SetView(PageState.PageView.Account)" class="btn btn-wide  bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">Sign In Now</button>
+                            </form>
+
+                        </div>
+
+                        <div class="modal-action">
+                            <form method="dialog">
+
+                                <button class="btn text-white btn rounded-md bg-gradient-to-b from-cyan-600 to-teal-500">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+
+
+            </NotAuthorized>
+        </AuthorizeView>
+    </CascadingAuthenticationState>
+
+
+</div>
+
+
+
+@code {
+
+
+    protected override void OnInitialized()
+    {
+
+        pageState.OnChange += StateHasChanged;
+    }
+    public void Dispose()
+    {
+        pageState.OnChange -= StateHasChanged;
+    }
+
+
+
+
+}
+
+
+
+*@

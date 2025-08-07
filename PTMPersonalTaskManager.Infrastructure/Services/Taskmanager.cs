@@ -51,9 +51,6 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
 
             find.Title = update.Title;
             find.Description = update.Description;
-            find.DueDate = update.DueDate;
-            find.IsCompleted = update.IsCompleted;
-            find.Priority = update.Priority;
 
             context.Update(find);
             await context.SaveChangesAsync();
