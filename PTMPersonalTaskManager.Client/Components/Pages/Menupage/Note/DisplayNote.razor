@@ -1,61 +1,158 @@
 ﻿@using Microsoft.AspNetCore.Components.Authorization
 @using PTMPersonalTaskManager.Client.Services
 @using PTMPersonalTaskManager.Domain.DTOs.DetailsDto
+@using PTMPersonalTaskManager.Domain.Entities
+@using PTMPersonalTaskManager.Infrastructure.Enums
 @using PTMPersonalTaskManager.Infrastructure.Services
 @inject TaskApiServices taskApiServices
 @rendermode InteractiveServer
 @attribute [StreamRendering]
 @inject PageState pageState
+@inject OptionsEnums optionsEnums
 
-<div class=" h-[565px] relative h-[565px] md:h-[275px] absolute top-20 pb-4 flex gap-4 flex-row flex-wrap w-full   overflow-auto ">
+@*<div class="relative top-20 pb-4 flex gap-4 flex-row flex-wrap w-full h-full overflow-auto">
+
     <CascadingAuthenticationState>
         <AuthorizeView>
             <Authorized>
 
                 @if (Display is not null)
                 {
-                    <button @onclick="()=>  Back()" class="btn ">back</button>
-                    <kbd class="kbd right-52 top-1 absolute text-cyan-800 bg-gradient-to-t from-sky-100 to-cyan-100 rounded-sm">@Display.Priority</kbd>
-                    <p class="right-5 top-1 absolute bg-gradient-to-t from-teal-900 to-sky-900 bg-clip-text text-transparent"> @Display.CreatedAtInPhilippines</p>
-                    <button @onclick="()=> ToggleEdit()"  class=" btn right-24 top-10 absolute bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">@(IsEdited ? "Save" : "Edit")</button>
-                    <input type="checkbox" aria-label="Ended" class=" btn right-5 top-10 absolute bg-gradient-to-t from-green-400 to-emerald-500 text-cyan-100 rounded-md" style="border-bottom: solid 1px rgba(0, 177, 191)" />
-                    @if (IsEdited)
-                    {
-                        <input @bind="EditedTitle"
-                        class="block w-[90%] mt-27 ml-7 text-lg italic font-semibold text-cyan-900 border-none outline-none bg-transparent" />
+                    <div class="left-2 absolute">
+                        <button @onclick="()=> Back()" class="btn text-sky-800 bg-gradient-to-t from-teal-100 to-cyan-100 border-cyan-700 rounded-sm">back</button>
+                    </div>
 
+                    <kbd class="kbd right-46 top-1 absolute text-cyan-800 bg-gradient-to-t from-sky-100 to-cyan-100 rounded-sm">
+                        @optionsEnums.Priority(Display.Priority)
+                    </kbd>
 
-                    }
-                    else
-                    {
-                        <h1 class="inline-block max-w-[90%] mt-27 ml-7 text-lg break-words italic font-semibold bg-gradient-to-t from-cyan-900 to-sky-900 bg-clip-text text-transparent">@Display.Title </h1>
-                    }
+                    <p class="right-5 top-1 absolute bg-gradient-to-t from-teal-900 to-sky-900 bg-clip-text text-transparent">
+                        @Display.CreatedAtInPhilippines
+                    </p>
 
+                    <button @onclick="()=> ToggleEdit()" class="btn right-24 top-10 absolute bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">
+                        @(IsEdited ? "Save" : "Edit")
+                    </button>
 
+                    <input type="checkbox" aria-label="Ended" class="btn right-5 top-10 absolute bg-gradient-to-t from-green-400 to-emerald-500 text-cyan-100 rounded-md" style="border-bottom: solid 1px rgba(0, 177, 191)" />
 
-                    <div class="flex  justify-center  w-[95%] ml-3">
+                    <!-- Title -->
+                    <div class="mt-7 ml-7 w-[90%] min-h-[3.5rem]">
                         @if (IsEdited)
                         {
-                            <textarea @bind="EditedDescription"
-                            class="w-full h-[440px] text-justify font-semilight bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent indent-6 resize-none overflow-auto border-none outline-none "
-                            >
-                            </textarea>
+                            <textarea @bind="EditedTitle"
+                                      class="w-full mt-15 h-auto break-normal text-lg italic font-semibold text-cyan-900 border-none outline-none bg-transparent break-words resize-none overflow-hidden">
+                                    </textarea>
 
+                            <div class="w-[95%] lg:w-[100%] px-4 mt-2 lg:mx-auto lg:px-5" style="border: solid 1px rgba(0, 146, 184);"></div>
                         }
                         else
                         {
-                            <p class="text-justify font-semilight bg-gradient-to-t from-cyan-800 to-sky-900 bg-clip-text text-transparent indent-6">
-                                @Display.Description
-                            </p>
+                            <h1 class="p-1 text-lg italic mt-15 font-semibold bg-gradient-to-t from-cyan-900 to-sky-900 bg-clip-text text-transparent break-words min-h-[3.5rem]">
+                                @Display.Title
+                            </h1>
+                            <div class="w-[95%] lg:w-[100%] px-4 mt-2 lg:mx-auto lg:px-5" style="border: solid 1px rgba(0, 146, 184);"></div>
+                        }
+                    </div>
+
+                    <!-- Description -->
+                    <div class="w-[95%] ml-3 h-auto">
+                        @if (IsEdited)
+                        {
+                            <textarea @bind="EditedDescription"
+                                      class="block w-full min-h-[440px] text-justify font-light indent-6
+                         resize-none border-none outline-none bg-transparent break-words
+                         text-cyan-900 overflow-hidden"
+                                      style="height:auto;">
+                </textarea>
+                        }
+                        else
+                        {
+                            <div class="h-full scroll-smooth">
+                                <pre class="font-light indent-6 bg-gradient-to-t from-cyan-800 to-sky-900
+                        bg-clip-text text-transparent break-words whitespace-pre-wrap">
+                                    @Display.Description
+                    </pre>
+                            </div>
                         }
                     </div>
 
                 }
                 else
                 {
-
                     <h1 class="text-ref-500">@Error</h1>
+                }
 
+            </Authorized>
+            <NotAuthorized>
+                <h1>Not Login</h1>
+            </NotAuthorized>
+        </AuthorizeView>
+    </CascadingAuthenticationState>
+</div>*@
+
+
+<div class="relative top-20 pb-4 flex gap-4 flex-row flex-wrap w-full">
+    <CascadingAuthenticationState>
+        <AuthorizeView>
+            <Authorized>
+                @if (Display is not null)
+                {
+                    <div class="left-2 absolute">
+                        <button @onclick="()=> Back()" class="btn text-sky-800 bg-gradient-to-t from-teal-100 to-cyan-100 border-cyan-700 rounded-sm">back</button>
+                    </div>
+                    <kbd class="kbd right-46 top-1 absolute text-cyan-800 bg-gradient-to-t from-sky-100 to-cyan-100 rounded-sm">@optionsEnums.Priority(Display.Priority)</kbd>
+                    <p class="right-5 top-1 absolute bg-gradient-to-t from-teal-900 to-sky-900 bg-clip-text text-transparent">@Display.CreatedAtInPhilippines</p>
+                    <button @onclick="()=> ToggleEdit()" class="btn right-23 top-10 absolute bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">@(IsEdited ? "Save" : "Edit")</button>
+                    <NavLink href="@($"/FullView/{Item.Id}")" class="btn right-5 top-10 absolute bg-gradient-to-t from-green-400 to-emerald-500 text-cyan-100 rounded-md" style="border-bottom: solid 1px rgba(0, 177, 191)">Read</NavLink>
+     
+                    <!-- T -->
+                    <div class="mt-10 ml-7 w-[90%] min-h-[3.5rem]">
+                        @if (IsEdited)
+                        {
+                            <textarea @bind="EditedTitle"
+                            class="w-full mt-15 h-auto break-normal text-lg italic font-semibold text-cyan-900 border-none outline-none bg-transparent break-words resize-none overflow-hidden">
+                            </textarea>
+                            <div class="w-[95%] lg:w-[100%] px-4 mt-2 lg:mx-auto lg:px-5" style="border: solid 1px rgba(0, 146, 184);"></div>
+                        }
+                        else
+                        {
+                            <h1 class=" text-lg italic mt-15 font-semibold bg-gradient-to-t from-cyan-900 to-sky-900 bg-clip-text text-transparent break-words min-h-[3.5rem]">
+                                @Display.Title
+                            </h1>
+                            <div class="w-[95%] lg:w-[100%] px-4 mt-2 lg:mx-auto lg:px-5" style="border: solid 1px rgba(0, 146, 184);"></div>
+                        }
+                    </div>
+
+                    <!-- D -->
+                    <div class="w-[95%] ml-3 h-auto">
+                        @if (IsEdited)
+                        {
+                            <div contenteditable="true"
+                                 @ref="editableDiv"
+                                 @oninput="OnInput"
+                                 class="px-6 py-4 block w-full font-serif text-lg leading-relaxed indent-8
+                border-none outline-none bg-transparent break-words text-cyan-900
+                min-h-[440px] max-w-[65ch] mx-auto tracking-wide whitespace-pre-wrap">
+                                @((MarkupString)EditedDescription!)
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="h-full scroll-smooth px-6 py-4">
+                                <pre class="font-serif text-lg leading-relaxed indent-8 bg-gradient-to-t
+                    from-cyan-800 to-sky-900 bg-clip-text text-transparent
+                    break-words whitespace-pre-wrap max-w-[65ch] mx-auto tracking-wide">
+                                    @Display.Description
+                </pre>
+                            </div>
+                        }
+                        </div>
+                        }
+
+                else
+                {
+                    <h1 class="text-ref-500">@Error</h1>
                 }
             </Authorized>
             <NotAuthorized>
@@ -66,25 +163,26 @@
 </div>
 
 
+
 @code {
     [Parameter]
     public DetailsDto Item { get; set; } = default!;
+
     private string? EditedTitle { get; set; }
     private string? EditedDescription { get; set; }
     private bool IsEdited = false;
 
     public DetailsDto? Display;
     public string? Error;
+
+
     @implements IDisposable
 
     public async Task Back()
     {
         await Task.Delay(50);
         await pageState.SetNote(PageState.PageView.NoteCardDisplay);
-     
     }
-
-
 
     protected override void OnInitialized()
     {
@@ -93,7 +191,7 @@
 
     private async Task RefreshComponent()
     {
-        await InvokeAsync(StateHasChanged); 
+        await InvokeAsync(StateHasChanged);
     }
 
     public void Dispose()
@@ -101,41 +199,33 @@
         pageState.Onchanges -= RefreshComponent;
     }
 
-
-
-
-
-
-
     protected override async Task OnParametersSetAsync()
     {
         Display = await taskApiServices.GetDataAsync(Item.Id);
         if (Display is null)
         {
             Error = "Nothing to Displays";
-
         }
-        if (Display is not null)
+        else
         {
             EditedTitle = Display.Title;
             EditedDescription = Display.Description;
         }
     }
+
     private async Task ToggleEdit()
     {
-      
         if (IsEdited)
         {
             if (Display is not null)
             {
                 var EditDtos = new UpdateTaskDto
                     {
-
                         Id = Display.Id,
                         Title = EditedTitle,
                         Description = EditedDescription
-
                     };
+
                 var result = await taskApiServices.UpdateTaskAsync(EditDtos);
                 if (result is not null)
                 {
@@ -144,15 +234,31 @@
                 }
                 else
                 {
-                    Console.WriteLine("Somethin Went Wrong");
+                    Console.WriteLine("Something Went Wrong");
                 }
             }
-          
         }
-          IsEdited = !IsEdited;
+
+        IsEdited = !IsEdited;
         StateHasChanged();
-     
+    }
+
+
+    private ElementReference editableDiv;
+    private void OnInput(ChangeEventArgs e)
+    {
 
     }
+
+    [Inject] private IJSRuntime JS { get; set; }
+
+    private async Task OnInput()
+    {
+        EditedDescription = await JS.InvokeAsync<string>(
+            "eval",
+            "document.activeElement.innerText"
+        );
+    }
+
 
 }

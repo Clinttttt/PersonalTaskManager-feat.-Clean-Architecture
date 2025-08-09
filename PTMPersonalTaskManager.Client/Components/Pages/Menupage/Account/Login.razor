@@ -40,7 +40,7 @@
                         <button @onclick="()=> HandleLogout()" class="btn bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">Logout</button>
                 </div>
               </div>
-             
+
             </div>
             <!--   <div class="relative px-4 pt-4 flex flex-col items-center justify-center gap-3">
                    <div class="w-20 h-20 rounded-full overflow-hidden mt-10 pt-6">
@@ -126,8 +126,8 @@
     {
         var state = await authstateProvider.GetAuthenticationStateAsync();
         claims = state.User.Claims;
+        await authApiServices.TryRefreshTokenAsync();
     }
-
 
     private async Task HandleLogin()
     {
@@ -186,6 +186,7 @@
         }
 
     }
+
 
     private async Task HandleLogout()
     {

@@ -1,0 +1,8 @@
+﻿/* Smooth scrolling */
+.custom-scrollable {
+    scroll-behavior: smooth;
+}
+
+textarea {
+    box-sizing: border-box;
+}

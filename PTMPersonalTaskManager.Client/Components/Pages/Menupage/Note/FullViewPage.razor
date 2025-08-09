@@ -1,0 +1,52 @@
+﻿@page "/FullView/{ViewId:guid}"
+@using PTMPersonalTaskManager.Domain.DTOs.DetailsDto
+@using PTMPersonalTaskManager.Infrastructure.Services
+@inject NavigationManager navigation
+@inject TaskApiServices taskApiServices
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+
+
+@if (Display is not null)
+{
+    <h1>@Display.Title</h1>
+}
+
+
+
+@if (!string.IsNullOrEmpty(Error))
+{
+    <h1 class="text-red-600">@Error</h1>
+}
+
+@code {
+
+    public DetailsDto? Display;
+    public string? Error { get; set; }
+    public bool HasLoaded;
+
+    [Parameter]
+    public Guid ViewId { get; set; }
+
+
+    protected override async Task OnAfterRenderAsync(bool loaded)
+    {
+        try
+        {
+            if (!HasLoaded && loaded)
+            {
+                HasLoaded = true;
+                Display = await taskApiServices.GetDataAsync(ViewId);
+                if(Display is null)
+                {
+                    Error = "Nothing To Display";
+                }
+            }
+        }catch( Exception ex)
+        {
+            Console.WriteLine("Error ata" + ex.Message);
+        }
+        StateHasChanged();
+    }
+
+}

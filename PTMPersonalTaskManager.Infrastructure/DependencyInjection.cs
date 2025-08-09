@@ -6,6 +6,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using PTMPersonalTaskManager.Domain.Interfaces;
 using PTMPersonalTaskManager.Infrastructure.Data;
+using PTMPersonalTaskManager.Infrastructure.Enums;
 using PTMPersonalTaskManager.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
@@ -46,6 +47,7 @@ namespace PTMPersonalTaskManager.Infrastructure
              NameClaimType = ClaimTypes.Name
          };
      });
+            services.AddScoped<OptionsEnums>();
          
             
 
