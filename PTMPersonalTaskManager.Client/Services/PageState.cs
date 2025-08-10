@@ -32,9 +32,13 @@ namespace PTMPersonalTaskManager.Client.Services
             NoteSpecificDisplay, 
             NoteCardDisplay,
             None,
-            ShowHeader
+            ShowHeader,
+        
+            
         }
     
+
+
         public PageView CurrentView { get; set; } = PageView.HomePage;
 
         public void SetView(PageView view)
@@ -54,7 +58,7 @@ namespace PTMPersonalTaskManager.Client.Services
         {
             await Task.Delay(100);
             CurrentView = view;
-            RenderKey = Guid.NewGuid(); // force a new component instance
+            RenderKey = Guid.NewGuid(); 
 
             if (Onchanges is not null)
             {
@@ -62,10 +66,11 @@ namespace PTMPersonalTaskManager.Client.Services
             }
         }
 
-
-
-
-
+        public async Task Back()
+        {
+            await Task.Delay(50);
+            await SetNote(PageState.PageView.NoteCardDisplay);
+        }
         public void ResetView()
         {
             CurrentView = PageView.None;
@@ -76,7 +81,7 @@ namespace PTMPersonalTaskManager.Client.Services
         public void Reset()
         {
            
-            Login = true;
+            Login = false;
             ShowRegister = false;
             NotifyChanges();
         }
@@ -84,7 +89,7 @@ namespace PTMPersonalTaskManager.Client.Services
 
         public void Hide()
         {
-
+            Login = false;
             HideCard = false;
             DisplayNotes = true; 
             NotifyChanges();
@@ -95,6 +100,23 @@ namespace PTMPersonalTaskManager.Client.Services
             ShowRegister = true;
             NotifyChanges();
         }
+
+        public enum Account
+        {
+            Login,
+            Register,
+            
+        }
+        public Account AccountView { get; set; } = Account.Login;
+             
+        public void ViewAccount(Account view)
+        {
+            AccountView = view;
+            OnChange?.Invoke();
+        }
+
+    
+
     }
 }
 

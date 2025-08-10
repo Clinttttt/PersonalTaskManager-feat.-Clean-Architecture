@@ -16,7 +16,7 @@
 <CascadingAuthenticationState>
     <AuthorizeView>
         <Authorized>
-            <div class="relative flex items-center justify-center flex-col gap-2 mt-10">
+            <div class="relative flex items-center justify-center flex-col gap-2 mt-10 relative">
                 <h1 class="text-2xl sm:text-3xl font-bold bg-gradient-to-t from-cyan-600 to-sky-900 bg-clip-text text-transparent border-1 border gap-1">You’re About to Sign Out</h1>
                 <div class="chat chat-start mt-5 pt-5">
                     <div class="chat-image avatar">
@@ -52,6 +52,7 @@
                </div>-->
         </Authorized>
         <NotAuthorized>
+
             <EditForm Model="@User" OnValidSubmit="@HandleLogin" FormName="Logins" Context="formContext">
                 <div class="relative px-4 pt-4 flex flex-col items-center gap-3">
 
@@ -105,9 +106,20 @@
 
 
                     <button type="submit" class="btn-wide btn  bg-gradient-to-t from-teal-400 to-cyan-500 text-cyan-100 rounded-md">Login</button>
-                    <h5 class="bg-gradient-to-t from-cyan-700 to-sky-800 bg-clip-text text-transparent">Dont have an Account? <span @onclick="()=> HideLogin()" class="cursor-pointer bg-gradient-to-t from-cyan-800 to-sky-800 bg-clip-text text-transparent text-md">Register</span></h5>
+                    <h5 class="bg-gradient-to-t from-cyan-700 to-sky-800 bg-clip-text text-transparent">Dont have an Account? <span @onclick="()=> pageState.ViewAccount(PageState.Account.Register)" class="cursor-pointer bg-gradient-to-t from-cyan-800 to-sky-800 bg-clip-text text-transparent text-md">Register</span></h5>
                     </div>
             </EditForm>
+            @if (!string.IsNullOrEmpty(Error))
+            {
+            
+                    <div role="alert" class="alert text-red-400 rounded-0 absolute w-full mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class=" h-5 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>@Error</span>
+                </div>
+            
+            }
         </NotAuthorized>
     </AuthorizeView>
 </CascadingAuthenticationState>

@@ -99,7 +99,7 @@
                 @if (Display is not null)
                 {
                     <div class="left-2 absolute">
-                        <button @onclick="()=> Back()" class="btn text-sky-800 bg-gradient-to-t from-teal-100 to-cyan-100 border-cyan-700 rounded-sm">back</button>
+                        <button @onclick="()=> pageState.Back()" class="btn text-sky-800 bg-gradient-to-t from-teal-100 to-cyan-100 border-cyan-700 rounded-sm">back</button>
                     </div>
                     <kbd class="kbd right-46 top-1 absolute text-cyan-800 bg-gradient-to-t from-sky-100 to-cyan-100 rounded-sm">@optionsEnums.Priority(Display.Priority)</kbd>
                     <p class="right-5 top-1 absolute bg-gradient-to-t from-teal-900 to-sky-900 bg-clip-text text-transparent">@Display.CreatedAtInPhilippines</p>
@@ -178,11 +178,7 @@
 
     @implements IDisposable
 
-    public async Task Back()
-    {
-        await Task.Delay(50);
-        await pageState.SetNote(PageState.PageView.NoteCardDisplay);
-    }
+ 
 
     protected override void OnInitialized()
     {

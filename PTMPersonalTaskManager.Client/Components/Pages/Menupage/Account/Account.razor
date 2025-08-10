@@ -2,12 +2,12 @@
 @inject PageState pageState
 
 
-<div class="top-50 xs:top-40 absolute left-1/2 border-sky-300 rounded-sm bg-gradient-to-t from-cyan-100 to-cyan-50 custom-css h-85  top-40 -translate-x-[50%] sm:-translate-x-[50%] w-[100%] md:w-[50%]" style="border:solid 1px rgba(0,0,0,0.2)">
-    @if (!hidelogin)
+<div class="top-40 xs:top-36  h-screen xs:h-93 absolute left-1/2 border-sky-300  bg-gradient-to-t from-cyan-100 to-cyan-50 custom-css   top-40 -translate-x-[50%] sm:-translate-x-[50%] w-[100%] md:w-[50%]" style="border:solid 1px rgba(0,0,0,0.2)">
+    @if (pageState.AccountView == PageState.Account.Login)
     {
         <Login />
     }
-    else if (hidelogin)
+    else if (pageState.AccountView == PageState.Account.Register)
     {
         <Register />
     }

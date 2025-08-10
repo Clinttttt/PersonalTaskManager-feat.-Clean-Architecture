@@ -9,7 +9,11 @@
 <div class="h-[610px] md:h-[275px]  absolute top-20 pb-4 flex gap-4 flex-row flex-wrap w-full  justify-center overflow-auto ">
     @if(display is null)
     {
-        <h1>No Task</h1>
+        <h1 class="text-red-500 z-10 bord">No Task</h1>
+        if (string.IsNullOrEmpty(Error))
+        {
+            <h1 class="text-red-600 z-10">@Error</h1>
+        }
     }
     else
     {
@@ -20,17 +24,24 @@
                     {
 
 
-                        <div class="  card  bg-gradient-to-b from-sky-400 h-[70%] to-cyan-700 text-primary-content w-[45%]">
-                            <div class="card-body">
-                                <div class="h-[295px] md:h-[96px] overflow-auto relative">
-                                    <h2 class="card-title text-sky-200 text-lg ">@card.Title</h2>
-                                    <p class="text-sky-200 ">@card.Description</p>
-                                </div>
-                                <div class="card-actions justify-end absolute bottom-3 right-5">
-                                    <button @onclick="()=> TaskView(card)" class="text-cyan-800 btn rounded-sm bg-gradient-to-b from-cyan-200 to-teal-200">View Tasks</button>
+                        if(card is null)
+                        {
+                            <h1 class="text-red-500">No Data</h1>
+                        }
+                        else
+                        {
+                            <div class="  card  bg-gradient-to-b from-sky-400 h-[70%] to-cyan-700 text-primary-content w-[45%]">
+                                <div class="card-body">
+                                    <div class="h-[295px] md:h-[96px] overflow-auto relative">
+                                        <h2 class="card-title text-sky-200 text-lg ">@card.Title</h2>
+                                        <p class="text-sky-200 ">@card.Description</p>
+                                    </div>
+                                    <div class="card-actions justify-end absolute bottom-3 right-5">
+                                        <button @onclick="()=> TaskView(card)" class="text-cyan-800 btn rounded-sm bg-gradient-to-b from-cyan-200 to-teal-200">View Story</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        }
 
 
                     }
@@ -56,22 +67,27 @@
 @code {
 
     private List<DetailsDto>? display => taskStateService.Task;
-
+    private string? Error;
     [Parameter]
     public EventCallback<DetailsDto> OnviewTask { get;set;}
 
     private void TaskView(DetailsDto task)
     {
-       
-        
+
+
         OnviewTask.InvokeAsync(task);
-       
+
     }
 
     protected override void OnInitialized()
     {
 
-       
+        if (display is null)
+        {
+            Error = "No data";
+            
+            return;
+        }
         taskStateService.Onchange += Refresh;
     }
   
