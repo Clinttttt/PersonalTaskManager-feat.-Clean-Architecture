@@ -85,7 +85,7 @@ namespace PTMPersonalTaskManager.Infrastructure.Services
                 );
             return new JwtSecurityTokenHandler().WriteToken(TokenDescriptor);
         }
-       
+           //2
         public string GenerateRefreshToken()
         {
             var RandomNumber = new byte[32];
